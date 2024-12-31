@@ -7446,7 +7446,7 @@ bool Game::combatChangeHealth(const std::shared_ptr<Creature> &attacker, const s
 		}
 
 		auto targetHealth = target->getHealth();
-		realDamage = damage.primary.value + damage.secondary.value;
+		realDamage = std::min<int32_t>(targetHealth, damage.primary.value + damage.secondary.value);
 		if (realDamage == 0) {
 			return true;
 		} else if (realDamage >= targetHealth) {
