@@ -487,7 +487,7 @@ void ItemParse::parseSkills(const std::string &stringValue, pugi::xml_attribute 
 	} else if (stringValue == "skillmusic") {
 		itemType.getAbilities().skills[SKILL_MUSIC] = pugi::cast<int32_t>(valueAttribute.value());
 	} else if (stringValue == "skillwisdom") {
-		itemType.getAbilities().skills[SKILL_WISDOM] = pugi::cast<int32_t>(valueAttribute.value());	
+		itemType.getAbilities().skills[SKILL_WISDOM] = pugi::cast<int32_t>(valueAttribute.value());
 	} else if (stringValue == "skillshield") {
 		itemType.getAbilities().skills[SKILL_SHIELD] = pugi::cast<int32_t>(valueAttribute.value());
 	} else if (stringValue == "skillfist") {
