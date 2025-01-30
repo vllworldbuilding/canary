@@ -9626,7 +9626,7 @@
 			<attribute key="slot" value="armor"/>
 		</attribute>
 	</item>
-	<item id="3359" article="a" name="brass armor">
+	<item id="3359" article="a" name="iron armor">
 		<attribute key="primarytype" value="armors"/>
 		<attribute key="armor" value="8"/>
 		<attribute key="weight" value="8000"/>
@@ -80969,30 +80969,12 @@ Granted by TibiaGoals.com"/>
 		<attribute key="primarytype" value="pillars"/>
 	
 	<!--novos items-->
-	<item id="60000" article="an" name="strange cross">
+	<item id="60000" article="a" name="adamantine ore">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
 	</item>
-	<item id="60001" article="" name="Christ the redeemer">
-	</item>
-	<item id="60002" article="a" name="big armor stand">
-	</item>
-	<item id="60003" article="an" name="sardine" plural="sardines">
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="520"/>
-	</item>
-	<item id="60004" article="an" name="chicken leg" plural="chicken legs">
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="520"/>
-	</item>
-	<item id="60005" article="a" name="cat pudding" plural="cat puddings">
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="520"/>
-	</item>
-	<item id="60006" article="an" name="new rune">
-		<attribute key="primarytype" value="attack runes"/>
-		<attribute key="type" value="rune"/>
-		<attribute key="runespellname" value="adevo grav vis"/>
-		<attribute key="charges" value="3"/>
-		<attribute key="weight" value="70"/>
-	</item>	
+
+
 </items>
 
