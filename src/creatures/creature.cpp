@@ -1137,6 +1137,10 @@ void Creature::onAttacked() {
 }
 
 void Creature::onAttackedCreatureDrainHealth(const std::shared_ptr<Creature> &target, int32_t points) {
+	if (!target || points <= 0) {
+		return;
+	}
+
 	target->addDamagePoints(static_self_cast<Creature>(), points);
 }
 
