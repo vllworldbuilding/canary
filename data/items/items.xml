@@ -9626,7 +9626,7 @@
 			<attribute key="slot" value="armor"/>
 		</attribute>
 	</item>
-	<item id="3359" article="a" name="iron armor">
+	<item id="3359" article="a" name="brass armor">
 		<attribute key="primarytype" value="armors"/>
 		<attribute key="armor" value="8"/>
 		<attribute key="weight" value="8000"/>
