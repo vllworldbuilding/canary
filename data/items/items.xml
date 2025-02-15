@@ -11088,7 +11088,7 @@
 			<attribute key="slot" value="feet"/>
 		</attribute>
 	</item>
-	<item id="3552" name="leather boots">
+	<item id="3552" name="tibia leather boots">
 		<attribute key="primarytype" value="boots"/>
 		<attribute key="armor" value="1"/>
 		<attribute key="weight" value="900"/>
@@ -80958,6 +80958,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="description" value="Offers a soul to the Soulpit. Combine with an exalted core to turn it into a lesser soul core."/>
 		<attribute key="weight" value="100"/>
 	</item>
+	
 	<item id="49164" article="a" name="soul prism">
 		<attribute key="description" value="Focalises the soul within a core. Can be used to turn a soul core into a greater version"/>
 		<attribute key="weight" value="100"/>
@@ -80978,3 +80979,251 @@ Granted by TibiaGoals.com"/>
 
 </items>
 
+	<!--novos items-->
+
+	<item id="60000" article="a" name="leather trousers">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="5600"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+	<item id="60001" article="a" name="leather cuirass">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="12000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>	
+	<item id="60002" name="leather chausses">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="1800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+		<item id="60003" name="leather hosen">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="1800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+	<item id="60004" article="a" name="leather jerkin">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>	
+	<item id="60005" article="a" name="leather mask">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>
+	<item id="60006" article="a" name="leather hood">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>
+	<item id="60007" article="a" name="leather bascinet">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60008" article="a" name="leather spangenhelm">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60009" article="a" name="leather boots">
+		<attribute key="primarytype" value="boots"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="900"/>
+		<attribute key="imbuementslot" value="1">
+			<attribute key="increase speed" value="3"/>
+		</attribute>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="feet"/>
+		</attribute>
+	</item>	
+	<item id="60010" article="an" name="iron plate boots">
+		<attribute key="primarytype" value="boots"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="900"/>
+		<attribute key="imbuementslot" value="1">
+			<attribute key="increase speed" value="3"/>
+		</attribute>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="feet"/>
+		</attribute>
+	</item>	
+	<item id="60011" article="an" name="iron plate legs">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="3"/>
+		<attribute key="weight" value="1800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+	<item id="60012" article="an" name="iron plate armor">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="3"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>	
+	<item id="60013" article="an" name="iron plate helmet">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60014" article="a" name="blue wizard hat">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60015" article="a" name="blue shoes">
+		<attribute key="primarytype" value="boots"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="900"/>
+		<attribute key="imbuementslot" value="1">
+			<attribute key="increase speed" value="3"/>
+		</attribute>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="feet"/>
+		</attribute>
+	</item>	
+	<item id="60016" name="blue silk pants">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="1800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+	<item id="60017" article="a" name="blue silk robe">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>	
+	<item id="60018" article="a" name="wizard staff">
+		<attribute key="description" value="Surges of energy rush through the tip of this wand"/>
+		<attribute key="weaponType" value="wand"/>
+		<attribute key="shootType" value="energy"/>
+		<attribute key="range" value="3"/>
+		<attribute key="weight" value="1900"/>
+		<attribute key="script" value="moveevent;weapon">
+			<attribute key="level" value="6"/>
+			<attribute key="mana" value="1"/>
+			<attribute key="fromDamage" value="8"/>
+			<attribute key="toDamage" value="18"/>
+			<attribute key="weaponType" value="wand"/>
+			<attribute key="wandType" value="energy"/>
+			<attribute key="vocation" value="Sorcerer;true, Master Sorcerer"/>
+			<attribute key="slot" value="hand"/>
+		</attribute>
+	</item>	
+	<item id="60019" article="a" name="1">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60020" article="a" name="22t">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60021" article="a" name="3">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>		
+	<item id="60030" article="The" name="Orcrist">
+		<attribute key="primarytype" value="sword weapons"/>
+		<attribute key="weaponType" value="sword"/>
+		<attribute key="attack" value="14"/>
+		<attribute key="extradef" value="1"/>
+		<attribute key="defense" value="12"/>
+		<attribute key="weight" value="3500"/>
+		<attribute key="imbuementslot" value="2">
+			<attribute key="elemental damage" value="3"/>
+			<attribute key="life leech" value="3"/>
+			<attribute key="mana leech" value="3"/>
+			<attribute key="critical hit" value="3"/>
+			<attribute key="skillboost sword" value="3"/>
+		</attribute>
+		<attribute key="script" value="moveevent;weapon">
+			<attribute key="weaponType" value="sword"/>
+			<attribute key="slot" value="hand"/>
+		</attribute>
+	</item>
+	<item id="60047" name="codfish" plural="codfishes">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>		
+	<item id="60048" name="herring" plural="herrings">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>
+	<item id="60049" name="sockeye" plural="sockeyes">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>	
+	<item id="60050" name="bluefin" plural="bluefins">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>
+	<item id="60051" name="Saint Peter" plural="Saint Peter fishes">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>	
+	<item id="60052" name="trout" plural="trouts">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>	
+	<item id="60055" name="salmon" plural="salmons">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>		
+	<item id="60056" name="black bass" plural="black bass">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>												
+</items>
