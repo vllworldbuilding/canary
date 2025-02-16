@@ -35,7 +35,7 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 
 		if player:getItemCount(3492) > 0 then
-			player:addSkillTries(SKILL_WISDOM, 1, true)
+			player:addSkillTries(SKILL_FISHING, 1, true)
 		end
 
 		if table.contains(seaIds, target.itemid) then
