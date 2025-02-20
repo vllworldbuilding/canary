@@ -90,7 +90,7 @@ int CanaryServer::run() {
 				IOMarket::getInstance().updateStatistics();
 
 				logger.info("Loaded all modules, server starting up...");
-				logger.info("This server is up to date until January 10, 2025 - PR #3157: perf: wheel.");
+				logger.info("This server is up to date until February 17, 2025 - PR #3376: fix: monster loot from raids");
 
 #ifndef _WIN32
 				if (getuid() == 0 || geteuid() == 0) {
