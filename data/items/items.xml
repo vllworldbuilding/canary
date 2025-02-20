@@ -81194,6 +81194,66 @@ Granted by TibiaGoals.com"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
+	<item id="60032" article="an" name="chunk of copper">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60033" article="an" name="copper lump">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>		
+	<item id="60034" article="an" name="copper nugget">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60035" article="an" name="copper grain" plural="copper grains">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60036" article="an" name="gold chunk">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60037" article="an" name="gold lump">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>
+	<item id="60038" article="an" name="gold nugget">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>		
+	<item id="60039" article="an" name="gold grain">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>		
+	<item id="60040" article="an" name="silver chunk">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60041" article="an" name="silver ore lump">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>		
+	<item id="60042" article="an" name="silver nugget">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60043" article="an" name="silver grain" plural="silver grains">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>							
 	<item id="60047" name="codfish" plural="codfishes">
 		<attribute key="primarytype" value="food"/>
 		<attribute key="weight" value="520"/>
@@ -81225,5 +81285,32 @@ Granted by TibiaGoals.com"/>
 	<item id="60056" name="black bass" plural="black bass">
 		<attribute key="primarytype" value="food"/>
 		<attribute key="weight" value="520"/>
-	</item>												
+	</item>
+	<item id="60057" article="a" name="dead orc">
+		<attribute key="fluidsource" value="blood"/>
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60058"/>
+		<attribute key="containersize" value="10"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60058" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60059"/>
+		<attribute key="weight" value="440925"/>
+	</item>	
+	<item id="60059" article="a" name="worthless wood">
+		<attribute key="duration" value="60"/>
+		<attribute key="decayTo" value="0"/>
+		<attribute key="weight" value="2646"/>
+	</item>	
+	<item id="60060" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60061"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60061" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="4317"/>
+		<attribute key="weight" value="440925"/>
+	</item>			
 </items>
