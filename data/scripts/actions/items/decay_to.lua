@@ -485,16 +485,15 @@ local transformItems = {
 	[42363] = 42364, -- djinn lamp
 	[42365] = 42366, -- djinn lamp
 	[60057] = 60058, -- orc archer corpse
-	[60058] = 60059, -- orc archer bow	
+	[60058] = 60059, -- orc archer bow
 	[60060] = 60061, -- uruk-hai corpse
-	[60061] = 4317, -- uruk-hai corpse	
+	[60061] = 4317, -- uruk-hai corpse
 	[60062] = 60063, -- grey cat corpse
 	[60063] = 289, -- grey cat corpse
 	[60064] = 60065, -- yellow cat corpse
 	[60065] = 289, -- yellow cat corpse
 	[60066] = 60067, -- yellow cat corpse
-	[60067] = 289, -- yellow cat corpse								
-
+	[60067] = 289, -- yellow cat corpse
 }
 
 local decayTo = Action()
