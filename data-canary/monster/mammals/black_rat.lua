@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Cave Rat")
+local mType = Game.createMonsterType("Black Rat")
 local monster = {}
 
-monster.description = "a cave rat"
-monster.experience = 10
+monster.description = "a black rat"
+monster.experience = 5
 monster.outfit = {
-	lookType = 56,
+	lookType = 21,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,7 +13,11 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 56
+monster.events = {
+	"RationalRequestRatDeath",
+}
+
+monster.raceId = 21
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
@@ -23,17 +27,15 @@ monster.Bestiary = {
 	CharmsPoints = 5,
 	Stars = 1,
 	Occurrence = 0,
-	Locations = "Almost everywhere in tibia, they seem to have a nest-like place in Greenshore, \z
-		a semi-large spawn at the entrance to the Port Hope troll cave and in cave near Ankrahmun ship. \z
-		Also appears in Rat Plague in Thais and Rat Plague in Rookgaard.",
+	Locations = "Rookgaard and Mainland, in most sewers and caves near towns. They can be found almost everywhere in Tibia.",
 }
 
-monster.health = 30
-monster.maxHealth = 30
+monster.health = 20
+monster.maxHealth = 20
 monster.race = "blood"
 monster.corpse = 5964
-monster.speed = 75
-monster.manaCost = 250
+monster.speed = 67
+monster.manaCost = 200
 
 monster.changeTarget = {
 	interval = 4000,
@@ -56,7 +58,7 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 3,
+	runHealth = 5,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -73,37 +75,34 @@ monster.voices = {
 	interval = 5000,
 	chance = 10,
 	{ text = "Meep!", yell = false },
-	{ text = "Meeeeep!", yell = false },
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 85000, maxCount = 2 },
-	{ name = "cookie", chance = 750 },
-	{ id = 3607, chance = 30000 }, -- cheese
-	{ name = "worm", chance = 9700, maxCount = 2 },
+	{ name = "gold coin", chance = 100000, maxCount = 4 },
+	{ id = 3607, chance = 39410 }, -- cheese
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -8 },
 }
 
 monster.defenses = {
 	defense = 5,
 	armor = 1,
-	mitigation = 0.10,
+	mitigation = 0.07,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
-	{ type = COMBAT_FIREDAMAGE, percent = -10 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 20 },
+	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
-	{ type = COMBAT_ICEDAMAGE, percent = 0 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
-	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = -10 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 20 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -10 },
 }
 
 monster.immunities = {

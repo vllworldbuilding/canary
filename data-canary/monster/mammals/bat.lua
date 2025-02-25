@@ -43,6 +43,11 @@ monster.strategiesTarget = {
 	nearest = 100,
 }
 
+monster.respawnType = {
+	period = night,
+	underground = true,
+}
+
 monster.flags = {
 	summonable = true,
 	attackable = true,

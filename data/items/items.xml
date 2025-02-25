@@ -11925,21 +11925,21 @@
 		<attribute key="weight" value="60000"/>
 	</item>
 	<item id="3993" name="earth"/>
-	<item id="3994" article="a" name="dead rat">
+	<item id="3994" article="a" name="dead black rat">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="3995"/>
-		<attribute key="weight" value="6300"/>
+		<attribute key="weight" value="882"/>	
 	</item>
-	<item id="3995" article="a" name="dead rat">
+	<item id="3995" article="a" name="dead black rat">
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="3996"/>
-		<attribute key="weight" value="4400"/>
+		<attribute key="weight" value="529"/>
 	</item>
-	<item id="3996" article="a" name="dead rat">
+	<item id="3996" article="a" name="dead black rat">
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
-		<attribute key="weight" value="2000"/>
+		<attribute key="weight" value="200"/>
 	</item>
 	<item id="3997" name="Tibiora's box">
 		<attribute key="description" value="It contains all the knowledge of the Tibian lands gathered arduously by Tibia-Stats.com"/>
@@ -11992,17 +11992,17 @@
 	<item id="4007" article="a" name="dead wolf">
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="4008"/>
-		<attribute key="weight" value="26000"/>
+		<attribute key="weight" value="282200"/>
 	</item>
 	<item id="4008" article="a" name="dead wolf">
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="4009"/>
-		<attribute key="weight" value="20000"/>
+		<attribute key="weight" value="253980"/>
 	</item>
 	<item id="4009" article="a" name="dead wolf">
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
-		<attribute key="weight" value="4000"/>
+		<attribute key="weight" value="17635"/>
 	</item>
 	<item id="4010" name="Tibiora's box">
 		<attribute key="description" value="It contains all the knowledge of the Tibian lands gathered arduously by Tibia-Stats.com"/>
@@ -13261,26 +13261,26 @@
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
-	<item id="4255" article="a" name="dead rat">
+	<item id="4255" article="a" name="dead brown rat">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
-		<attribute key="decayTo" value="3994"/>
-		<attribute key="weight" value="6300"/>
+		<attribute key="decayTo" value="4256"/>
+		<attribute key="weight" value="1765"/>	
 	</item>
-	<item id="4256" article="a" name="dead rat">
+	<item id="4256" article="a" name="dead brown rat">
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="4257"/>
-		<attribute key="weight" value="4400"/>
+		<attribute key="weight" value="1574"/>
 	</item>
-	<item id="4257" article="a" name="dead rat">
+	<item id="4257" article="a" name="dead brown rat">
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
-		<attribute key="weight" value="3000"/>
+		<attribute key="weight" value="300"/>
 	</item>
-	<item id="4258" article="a" name="dead rat">
+	<item id="4258" article="a" name="dead brown rat">
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
-		<attribute key="weight" value="3000"/>
+		<attribute key="weight" value="300"/>
 	</item>
 	<item id="4259" article="a" name="dead snake">
 		<attribute key="duration" value="300"/>
@@ -16097,10 +16097,11 @@
 		<attribute key="decayTo" value="3990"/>
 		<attribute key="containersize" value="10"/>
 	</item>
-	<item id="5964" article="a" name="dead rat">
+	<item id="5964" article="a" name="dead black rat">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="3994"/>
+		<attribute key="weight" value="882"/>	
 	</item>
 	<item id="5965" article="a" name="dead human">
 		<attribute key="containersize" value="10"/>
@@ -16121,6 +16122,7 @@
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="4007"/>
+		<attribute key="weight" value="282200"/>	
 	</item>
 	<item id="5969" article="a" name="dead minotaur">
 		<attribute key="fluidsource" value="blood"/>
@@ -43003,7 +43005,7 @@ My sad story is told by few living humans but many dead warriors"/>
 		<attribute key="primarytype" value="machines (objects)"/>
 	</item>
 	<item id="21850" article="a" name="dead rat">
-		<attribute key="weight" value="300"/>
+		<attribute key="weight" value="882"/>
 	</item>
 	<item fromid="21851" toid="21852" article="a" name="dinky moss floret">
 		<attribute key="primarytype" value="plants and herbs"/>
@@ -81312,5 +81314,16 @@ Granted by TibiaGoals.com"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="4317"/>
 		<attribute key="weight" value="440925"/>
-	</item>			
+	</item>
+	<item id="60068" article="a" name="hunting knife">
+		<attribute key="primarytype" value="sword weapons"/>
+		<attribute key="weaponType" value="sword"/>
+		<attribute key="attack" value="5"/>
+		<attribute key="defense" value="5"/>
+		<attribute key="weight" value="420"/>
+		<attribute key="script" value="moveevent;weapon">
+			<attribute key="weaponType" value="sword"/>
+			<attribute key="slot" value="hand"/>
+		</attribute>
+	</item>		
 </items>
