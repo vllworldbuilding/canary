@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
 <monsters>
-	<monster centerx="19989" centery="20009" centerz="7" radius="1">
-		<monster name="Uruk-hai" x="0" y="0" z="7" spawntime="60" />
-	</monster>
+
 </monsters>
