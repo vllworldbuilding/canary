@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <items>
 	<!-- Liquids -->
     <!-- Fluid type 0 is same as water (id="1") -->
-    <item id="1" name="saltwater"/>
+    <item id="1" name="salt water"/>
     <item id="2" name="wine"/>
     <item id="3" name="beer"/>
     <item id="4" name="mud"/>
@@ -11,8 +11,8 @@
     <item id="7" name="oil"/>
     <item id="8" name="urine"/>
     <item id="9" name="milk"/>
-    <item id="10" name="manafluid"/>
-    <item id="11" name="lifefluid"/>
+    <item id="10" name="mana fluid"/>
+    <item id="11" name="life fluid"/>
     <item id="12" name="lemonade"/>
     <item id="13" name="rum"/>
     <item id="14" name="fruit juice"/>
@@ -20,9 +20,10 @@
     <item id="16" name="mead"/>
     <item id="17" name="tea"/>
     <item id="18" name="ink"/>
-    <item id="19" name="candyfluid"/>
+    <item id="19" name="candy fluid"/>
     <item id="20" name="chocolate"/>
-	<item id="21" name="freshwater"/>
+	<item id="21" name="fresh water"/>
+
     <!-- 13.40 last fluid is 20, 21+ is a loop from 0 to 20 over and over again -->
 
 	<item id="100" name="void"/>
@@ -81515,5 +81516,16 @@ Granted by TibiaGoals.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="slot" value="armor"/>
 		</attribute>
-	</item>																	
+	</item>
+	<item id="60286" article="a" name="bottle of red wine">
+		<attribute key="primarytype" value="kitchen tools"/>
+		<attribute key="allowpickUpAble" value="1"/>
+		<attribute key="weight" value="380"/>
+	</item>									
+	<item fromid="60287" toid="60289" article="a" name="bottle of white wine">
+		<attribute key="primarytype" value="kitchen tools"/>
+		<attribute key="allowpickUpAble" value="1"/>
+		<attribute key="weight" value="380"/>
+	</item>
+															
 </items>
