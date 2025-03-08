@@ -84,6 +84,7 @@ monster.loot = {
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -8 },
+	{ name = "condition", type = CONDITION_CURSED, interval = 2000, chance = 15, minDamage = -200, maxDamage = -300, range = 1, shootEffect = false, effect = CONST_ME_MORTAREA, target = false },
 }
 
 monster.defenses = {
