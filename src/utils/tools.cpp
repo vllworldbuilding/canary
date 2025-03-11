@@ -981,17 +981,11 @@ std::string getSkillName(uint8_t skillid) {
 		case SKILL_MINING:
 			return "mining";
 
-		case SKILL_SMITHING:
-			return "smithing";
+		case SKILL_METALWORKING:
+			return "metalworking";
 
-		case SKILL_ENCHANTING:
-			return "enchanting";
-
-		case SKILL_WOODCUTTING:
-			return "woodcutting";
-
-		case SKILL_FLETCHING:
-			return "fletching";
+		case SKILL_WOODWORKING:
+			return "woodworking";
 
 		case SKILL_HUNTING:
 			return "hunting";
@@ -1017,8 +1011,14 @@ std::string getSkillName(uint8_t skillid) {
 		case SKILL_MUSIC:
 			return "music";
 
-		case SKILL_WISDOM:
-			return "wisdom";
+		case SKILL_LORE:
+			return "lore";
+
+		case SKILL_INSCRIPTION:
+			return "inscription";
+
+		case SKILL_LANGUAGES:
+			return "languages";
 
 		case SKILL_CRITICAL_HIT_CHANCE:
 			return "critical hit chance";
