@@ -374,10 +374,8 @@ Game::Game() {
 		{ static_cast<uint8_t>(EXPERIENCE), "Experience Points" },
 		{ static_cast<uint8_t>(FISHING), "Fishing" },
 		{ static_cast<uint8_t>(MINING), "Mining" },
-		{ static_cast<uint8_t>(SMITHING), "Smithing" },
-		{ static_cast<uint8_t>(ENCHANTING), "Enchanting" },
-		{ static_cast<uint8_t>(WOODCUTTING), "Woodcutting" },
-		{ static_cast<uint8_t>(FLETCHING), "Fletching" },
+		{ static_cast<uint8_t>(METALWORKING), "Metalworking" },
+		{ static_cast<uint8_t>(WOODWORKING), "Woodworking" },
 		{ static_cast<uint8_t>(HUNTING), "Hunting" },
 		{ static_cast<uint8_t>(FARMING), "Farming" },
 		{ static_cast<uint8_t>(COOKING), "Cooking" },
@@ -386,7 +384,9 @@ Game::Game() {
 		{ static_cast<uint8_t>(ALCHEMY), "Alchemy" },
 		{ static_cast<uint8_t>(ARCHAEOLOGY), "Archaeology" },
 		{ static_cast<uint8_t>(MUSIC), "Music" },
-		{ static_cast<uint8_t>(WISDOM), "Wisdom" },
+		{ static_cast<uint8_t>(LORE), "Lore" },
+		{ static_cast<uint8_t>(INSCRIPTION), "Inscription" },
+		{ static_cast<uint8_t>(LANGUAGES), "Languages" },
 		{ static_cast<uint8_t>(FIST_FIGHTING), "Fist Fighting" },
 		{ static_cast<uint8_t>(GOSHNAR), "Goshnar's Taint" },
 		{ static_cast<uint8_t>(LOYALTY_POINTS), "Loyalty Points" },
@@ -405,10 +405,8 @@ Game::Game() {
 		HighscoreCategory("Shielding", static_cast<uint8_t>(HighscoreCategories_t::SHIELDING)),
 		HighscoreCategory("Fishing", static_cast<uint8_t>(HighscoreCategories_t::FISHING)),
 		HighscoreCategory("Mining", static_cast<uint8_t>(HighscoreCategories_t::MINING)),
-		HighscoreCategory("Smithing", static_cast<uint8_t>(HighscoreCategories_t::SMITHING)),
-		HighscoreCategory("Enchanting", static_cast<uint8_t>(HighscoreCategories_t::ENCHANTING)),
-		HighscoreCategory("Woodcutting", static_cast<uint8_t>(HighscoreCategories_t::WOODCUTTING)),
-		HighscoreCategory("Fletching", static_cast<uint8_t>(HighscoreCategories_t::FLETCHING)),
+		HighscoreCategory("Metalworking", static_cast<uint8_t>(HighscoreCategories_t::METALWORKING)),
+		HighscoreCategory("Woodworking", static_cast<uint8_t>(HighscoreCategories_t::WOODWORKING)),
 		HighscoreCategory("Hunting", static_cast<uint8_t>(HighscoreCategories_t::HUNTING)),
 		HighscoreCategory("Farming", static_cast<uint8_t>(HighscoreCategories_t::FARMING)),
 		HighscoreCategory("Cooking", static_cast<uint8_t>(HighscoreCategories_t::COOKING)),
@@ -417,7 +415,9 @@ Game::Game() {
 		HighscoreCategory("Alchemy", static_cast<uint8_t>(HighscoreCategories_t::ALCHEMY)),
 		HighscoreCategory("Archaeology", static_cast<uint8_t>(HighscoreCategories_t::ARCHAEOLOGY)),
 		HighscoreCategory("Music", static_cast<uint8_t>(HighscoreCategories_t::MUSIC)),
-		HighscoreCategory("Wisdom", static_cast<uint8_t>(HighscoreCategories_t::WISDOM)),
+		HighscoreCategory("Lore", static_cast<uint8_t>(HighscoreCategories_t::LORE)),
+		HighscoreCategory("Inscription", static_cast<uint8_t>(HighscoreCategories_t::INSCRIPTION)),
+		HighscoreCategory("Languages", static_cast<uint8_t>(HighscoreCategories_t::LANGUAGES)),
 		HighscoreCategory("Magic Level", static_cast<uint8_t>(HighscoreCategories_t::MAGIC_LEVEL))
 	};
 
@@ -8901,14 +8901,10 @@ std::string Game::getSkillNameById(uint8_t &skill) {
 			return "skill_fishing";
 		case HighscoreCategories_t::MINING:
 			return "skill_mining";
-		case HighscoreCategories_t::SMITHING:
-			return "skill_smithing";
-		case HighscoreCategories_t::ENCHANTING:
-			return "skill_enchanting";
-		case HighscoreCategories_t::WOODCUTTING:
-			return "skill_woodcutting";
-		case HighscoreCategories_t::FLETCHING:
-			return "skill_fletching";
+		case HighscoreCategories_t::METALWORKING:
+			return "skill_metalworking";
+		case HighscoreCategories_t::WOODWORKING:
+			return "skill_woodworking";
 		case HighscoreCategories_t::HUNTING:
 			return "skill_hunting";
 		case HighscoreCategories_t::FARMING:
@@ -8925,8 +8921,12 @@ std::string Game::getSkillNameById(uint8_t &skill) {
 			return "skill_archaeology";
 		case HighscoreCategories_t::MUSIC:
 			return "skill_music";
-		case HighscoreCategories_t::WISDOM:
-			return "skill_wisdom";
+		case HighscoreCategories_t::LORE:
+			return "skill_lore";
+		case HighscoreCategories_t::INSCRIPTION:
+			return "skill_inscription";
+		case HighscoreCategories_t::LANGUAGES:
+			return "skill_languages";
 		case HighscoreCategories_t::MAGIC_LEVEL:
 			return "maglevel";
 		case HighscoreCategories_t::BOSS_POINTS:

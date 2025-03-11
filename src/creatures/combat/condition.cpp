@@ -965,43 +965,23 @@ bool ConditionAttributes::setParam(ConditionParam_t param, int32_t value) {
 			return true;
 		}
 
-		case CONDITION_PARAM_SKILL_SMITHING: {
-			skills[SKILL_SMITHING] = value;
+		case CONDITION_PARAM_SKILL_METALWORKING: {
+			skills[SKILL_METALWORKING] = value;
 			return true;
 		}
 
-		case CONDITION_PARAM_SKILL_SMITHINGPERCENT: {
-			skillsPercent[SKILL_SMITHING] = value;
+		case CONDITION_PARAM_SKILL_METALWORKINGPERCENT: {
+			skillsPercent[SKILL_METALWORKING] = value;
 			return true;
 		}
 
-		case CONDITION_PARAM_SKILL_ENCHANTING: {
-			skills[SKILL_ENCHANTING] = value;
+		case CONDITION_PARAM_SKILL_WOODWORKING: {
+			skills[SKILL_WOODWORKING] = value;
 			return true;
 		}
 
-		case CONDITION_PARAM_SKILL_ENCHANTINGPERCENT: {
-			skillsPercent[SKILL_ENCHANTING] = value;
-			return true;
-		}
-
-		case CONDITION_PARAM_SKILL_WOODCUTTING: {
-			skills[SKILL_WOODCUTTING] = value;
-			return true;
-		}
-
-		case CONDITION_PARAM_SKILL_WOODCUTTINGPERCENT: {
-			skillsPercent[SKILL_WOODCUTTING] = value;
-			return true;
-		}
-
-		case CONDITION_PARAM_SKILL_FLETCHING: {
-			skills[SKILL_FLETCHING] = value;
-			return true;
-		}
-
-		case CONDITION_PARAM_SKILL_FLETCHINGPERCENT: {
-			skillsPercent[SKILL_FLETCHING] = value;
+		case CONDITION_PARAM_SKILL_WOODWORKINGPERCENT: {
+			skillsPercent[SKILL_WOODWORKING] = value;
 			return true;
 		}
 
@@ -1085,13 +1065,33 @@ bool ConditionAttributes::setParam(ConditionParam_t param, int32_t value) {
 			return true;
 		}
 
-		case CONDITION_PARAM_SKILL_WISDOM: {
-			skills[SKILL_WISDOM] = value;
+		case CONDITION_PARAM_SKILL_LORE: {
+			skills[SKILL_LORE] = value;
 			return true;
 		}
 
-		case CONDITION_PARAM_SKILL_WISDOMPERCENT: {
-			skillsPercent[SKILL_WISDOM] = value;
+		case CONDITION_PARAM_SKILL_LOREPERCENT: {
+			skillsPercent[SKILL_LORE] = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_SKILL_INSCRIPTION: {
+			skills[SKILL_INSCRIPTION] = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_SKILL_INSCRIPTIONPERCENT: {
+			skillsPercent[SKILL_INSCRIPTION] = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_SKILL_LANGUAGES: {
+			skills[SKILL_LANGUAGES] = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_SKILL_LANGUAGESPERCENT: {
+			skillsPercent[SKILL_LANGUAGES] = value;
 			return true;
 		}
 
