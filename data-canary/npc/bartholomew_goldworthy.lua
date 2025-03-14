@@ -158,7 +158,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif npcHandler:getTopic(playerId) == 2 then
 		if MsgContains(message, "yes") then
-			if player:getStorageValue(Storage.Quest.U9_1.TheRookieGuard.Mission08) == 1 then
+			--[[if player:getStorageValue(Storage.Quest.U9_1.TheRookieGuard.Mission08) == 1 then
 				player:depositMoney(count[playerId])
 				Bank.credit(player, 50)
 				npcHandler:say("Alright, we have added the amount of " .. count[playerId] .. " +50 gold to your {balance} - that is the money you deposited plus a bonus of 50 gold. \z
@@ -166,7 +166,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.Quest.U9_1.TheRookieGuard.Mission08, 2)
 				npcHandler:setTopic(playerId, 0)
 				return false
-			end
+			end]]
 			if player:depositMoney(count[playerId]) then
 				npcHandler:say("Alright, we have added the amount of " .. count[playerId] .. " gold to your {balance}. \z
 				You can {withdraw} your money anytime you want to.", npc, creature)
