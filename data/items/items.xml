@@ -10899,6 +10899,8 @@
 	</item>
 	<item id="3483" article="a" name="fishing rod">
 		<attribute key="primarytype" value="tools"/>
+		<attribute key="showCharges" value="1"/>
+		<attribute key="charges" value="5"/>		
 		<attribute key="weight" value="850"/>
 	</item>
 	<item id="3484" article="a" name="telescope">
