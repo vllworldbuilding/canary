@@ -8,6 +8,9 @@ local riverlootFood = { 60051, 32044, 32045 } --just food loot from river: saint
 local riverlootCommon = { 32043, 60056, 7159 } --common loot from river: bass, black-bass, green perch
 local riverlootRare = { 60055, 60052, 3580, 7158 } --rare loot from river: salmon, trout, northern pike, rainbow trout
 local riverlootVeryRare = { 60049 } --veryrare loot from river: sockeye
+local monsters = { "Shark", "Crab" }
+
+
 
 local specials = {
 	chances = {
@@ -22,12 +25,28 @@ local specials = {
 
 local useWorms = true
 
+local function refreeIceHole(position)
+	local iceHole = Tile(position):getItemById(7237)
+	if iceHole then
+		iceHole:transform(7200)
+	end
+end
+
 local fishing = Action()
 
 function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if not (table.contains(seaIds, target.itemid) or table.contains(riverIds, target.itemid)) then
 		return false
 	end
+
+--[[	SPAWN DE SHARKS OU OUTRAS CRIATURAS.
+	if useWorms and targetId == 7236 and player:removeItem("worm", 1) then
+		if math.random(10) >= 3 then
+			Game.createMonster("Shark", Position(playerPosition))
+			--item:remove()
+		end
+		return true
+	end]]
 
 	if math.random(100) <= math.min(math.max(10 + (player:getEffectiveSkillLevel(SKILL_FISHING) - 10) * 0.597, 10), 50) then
 		if useWorms and not player:removeItem("worm", 1) then
