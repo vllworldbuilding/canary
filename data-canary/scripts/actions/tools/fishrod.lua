@@ -10,8 +10,6 @@ local riverlootRare = { 60055, 60052, 3580, 7158 } --rare loot from river: salmo
 local riverlootVeryRare = { 60049 } --veryrare loot from river: sockeye
 local monsters = { "Shark", "Crab" }
 
-
-
 local specials = {
 	chances = {
 		{ from = 0, to = 500, itemId = 3026 }, -- white pearl
@@ -39,7 +37,7 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
---[[	SPAWN DE SHARKS OU OUTRAS CRIATURAS.
+	--[[	SPAWN DE SHARKS OU OUTRAS CRIATURAS.
 	if useWorms and targetId == 7236 and player:removeItem("worm", 1) then
 		if math.random(10) >= 3 then
 			Game.createMonster("Shark", Position(playerPosition))
