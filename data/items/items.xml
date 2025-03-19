@@ -81529,5 +81529,40 @@ Granted by TibiaGoals.com"/>
 		<attribute key="allowpickUpAble" value="1"/>
 		<attribute key="weight" value="380"/>
 	</item>
-															
+	<item id="60339" article="a" name="oak">
+		<attribute key="primarytype" value="trees"/>
+	</item>
+	<item id="60340" article="a" name="almond tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>	
+	<item id="60341" article="a" name="ebony tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>		
+	<item id="60342" article="a" name="chestnut tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>		
+	<item id="60343" article="a" name="cinnamon tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>
+	<item id="60344" article="a" name="apple tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>
+	<item id="60345" article="a" name="cedar tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>		
+	<item id="60346" article="a" name="mahogany tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>		
+	<item id="60347" article="a" name="pomegranate tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>	
+	<item id="60348" article="a" name="olive tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>			
+	<item id="60349" article="a" name="sweetgum tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>	
+	<item id="60350" article="a" name="fig tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>																	
 </items>
