@@ -10897,11 +10897,12 @@
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="weight" value="2100"/>
 	</item>
-	<item id="3483" article="a" name="fishing rod">
+	<item id="3483" article="a" name="bamboo fishing rod">
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="5"/>		
-		<attribute key="weight" value="850"/>
+		<attribute key="decayTo" value="60370"/>
+		<attribute key="charges" value="40"/>		
+		<attribute key="weight" value="3"/>
 	</item>
 	<item id="3484" article="a" name="telescope">
 		<attribute key="primarytype" value="decoration"/>
@@ -81564,5 +81565,39 @@ Granted by TibiaGoals.com"/>
 	</item>	
 	<item id="60350" article="a" name="fig tree">
 		<attribute key="primarytype" value="trees"/>
-	</item>																	
+	</item>
+	<item id="60370" article="a" name="bamboo rod">
+		<attribute key="primarytype" value="natural products"/>
+		<attribute key="weight" value="3"/>
+	</item>
+	<item id="60371" article="a" name="bamboo rod and line">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="3"/>
+	</item>
+	<item id="60372" article="a" name="hazel rod">
+		<attribute key="primarytype" value="natural products"/>
+		<attribute key="weight" value="4"/>
+	</item>
+	<item id="60373" article="a" name="hazel rod and line">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="4"/>
+	</item>
+	<item id="60374" article="a" name="fish hook">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="1"/>
+	</item>
+	<item id="60375" article="a" name="twin hook">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="1"/>
+	</item>					
+	<item id="60376" article="a" name="fishing line">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="This is crafted from silk."/>		
+		<attribute key="weight" value="1"/>
+	</item>	
+	<item id="60375" article="a" name="blue fishing line">
+		<attribute key="description" value="This is made from unicorn mane."/>		
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="1"/>
+	</item>		
 </items>

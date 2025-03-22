@@ -1,11 +1,14 @@
 local seaIds = { 4597, 4598, 4599, 4600, 4601, 4602, 4609, 4610, 4611, 4612, 4613, 4614, 7236 } --sea water
 local riverIds = { 21302, 21303, 21304, 21305, 21306, 21307, 21311, 21312, 21313, 21314, 21315 } --river water
-local sealootFood = { 60048 } --just food loot from sea: hering
+local sealootTrash = {} --just trash
 local sealootCommon = { 60048 } --common loot from sea: hering
 local sealootRare = { 60050, 3581 } --rare loot from sea: bluefin, shrimp
 local sealootVeryRare = { 60047 } --veryrare loot from sea: codfish 
 local riverlootFood = { 60051, 32044, 32045 } --just food loot from river: saint-peter, small bass, tiny bass
 local riverlootCommon = { 32043, 60056, 7159 } --common loot from river: bass, black-bass, green perch
+local sealootVeryRare = { 60047 } --veryrare loot from sea: codfish
+local riverlootTrash = {} --just trash
+local riverlootCommon = { 60051, 32044, 32045, 32043, 60056, 7159 } --common loot from river: bass, black-bass, green perch, small bass, tiny bass
 local riverlootRare = { 60055, 60052, 3580, 7158 } --rare loot from river: salmon, trout, northern pike, rainbow trout
 local riverlootVeryRare = { 60049 } --veryrare loot from river: sockeye
 local monsters = { "Shark", "Crab" }
@@ -44,16 +47,30 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		if math.random(10) >= 3 then
 			Game.createMonster("Shark", Position(playerPosition))
 			--item:remove()
+	local fishingCharges = item:getAttribute(ITEM_ATTRIBUTE_CHARGES)
+	fishingCharges = fishingCharges - 1
+	if fishingCharges > 0 then
+		local container = item:getParent()
+		item:setAttribute(ITEM_ATTRIBUTE_CHARGES, fishingCharges)
+		if container:isContainer() then
+			player:sendUpdateContainer(container)
 		end
+	else
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your fishing rod broke.")
+		item:transform()
+		item:decay()
 		return true
-	end]]
+	end
 
 	if math.random(100) <= math.min(math.max(10 + (player:getEffectiveSkillLevel(SKILL_FISHING) - 10) * 0.597, 10), 50) then
 		if useWorms and not player:removeItem("worm", 1) then
 			return true
 		end
 
+		local playerPosition = player:getPosition()
+
 		if player:getItemCount(3492) > 0 then
+			toPosition:sendMagicEffect(CONST_ME_LOSEENERGY)
 			player:addSkillTries(SKILL_FISHING, 1, true)
 		end
 
@@ -65,10 +82,16 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 				player:addItem(sealootVeryRare[math.random(#sealootVeryRare)], 1)
 			elseif rareChance == 2 then
 				player:addItem(sealootRare[math.random(#sealootRare)], 1)
-			elseif rareChance <= 10 then
+			elseif rareChance >= 10 then
 				player:addItem(sealootCommon[math.random(#sealootCommon)], 1)
+			elseif rareChance >= 80 then
+				--item:transform() id da vara quebrada quebrou a vara 
+			elseif rareChance >= 90 then
+				--removeItem		-- puxou a vara inteira	pra agua
+			elseif rareChance >= 95 then
+				Game.createMonster("Crab", Position(playerPosition))
 			else
-				player:addItem(sealootFood[math.random(#sealootFood)], 1)
+				player:addItem(sealootTrash[math.random(#sealootTrash)], 1)
 			end
 			return true
 		end
@@ -84,7 +107,7 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			elseif rareChance1 <= 10 then
 				player:addItem(riverlootCommon[math.random(#riverlootCommon)], 1)
 			else
-				player:addItem(riverlootFood[math.random(#riverlootFood)], 1)
+				player:addItem(riverlootTrash[math.random(#riverlootTrash)], 1)
 			end
 			return true
 		end
