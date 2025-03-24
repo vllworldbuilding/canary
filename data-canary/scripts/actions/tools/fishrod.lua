@@ -64,8 +64,25 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
 	if math.random(100) <= math.min(math.max(10 + (player:getEffectiveSkillLevel(SKILL_FISHING) - 10) * 0.597, 10), 50) then
 		if useWorms and not player:removeItem("worm", 1) then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The fish hunger, yet thy worms are gone.")
+			toPosition:sendMagicEffect(CONST_ME_LOSEENERGY)
 			return true
 		end
+
+		local fishingCharges = item:getAttribute(ITEM_ATTRIBUTE_CHARGES)
+		fishingCharges = fishingCharges - 1
+		if fishingCharges > 0 then
+			local container = item:getParent()
+			item:setAttribute(ITEM_ATTRIBUTE_CHARGES, fishingCharges)
+			if container:isContainer() then
+				player:sendUpdateContainer(container)
+			end
+		elseif fishingCharges < 1 then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your fishing rod broke.")
+			item:transform(60370)
+			return true
+		end			
+
 
 		local playerPosition = player:getPosition()
 
