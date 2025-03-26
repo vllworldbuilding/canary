@@ -91,7 +91,7 @@ monster.loot = {
 	{ name = "chain legs", chance = 23080 },
 	{ id = 7401, chance = 23080 }, -- minotaur trophy
 	{ name = "power bolt", chance = 23080, maxCount = 7 },
-	{ name = "fishing rod", chance = 7690 },
+	--{ name = "fishing rod", chance = 7690 },
 	{ name = "strong health potion", chance = 7690 },
 }
 
