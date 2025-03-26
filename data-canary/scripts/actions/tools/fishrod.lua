@@ -69,6 +69,13 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			return true
 		end
 
+		local playerPosition = player:getPosition()
+
+		if player:getItemCount(3492) > 0 then
+			toPosition:sendMagicEffect(CONST_ME_LOSEENERGY)
+			player:addSkillTries(SKILL_FISHING, 1, true)
+		end
+
 		local fishingCharges = item:getAttribute(ITEM_ATTRIBUTE_CHARGES)
 		fishingCharges = fishingCharges - 1
 		if fishingCharges > 0 then
@@ -77,18 +84,10 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			if container:isContainer() then
 				player:sendUpdateContainer(container)
 			end
-		elseif fishingCharges < 1 then
+		elseif fishingCharges <= 0 then
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your fishing rod broke.")
-			item:transform(60370)
+			item:transform(60370, 1)
 			return true
-		end			
-
-
-		local playerPosition = player:getPosition()
-
-		if player:getItemCount(3492) > 0 then
-			toPosition:sendMagicEffect(CONST_ME_LOSEENERGY)
-			player:addSkillTries(SKILL_FISHING, 1, true)
 		end
 
 		if table.contains(seaIds, target.itemid) then
