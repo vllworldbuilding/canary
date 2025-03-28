@@ -81599,5 +81599,28 @@ Granted by TibiaGoals.com"/>
 		<attribute key="description" value="This is made from unicorn mane."/>		
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="weight" value="1"/>
+	</item>
+	<item id="60385" article="an" name="cajadaum">
+		<attribute key="primarytype" value="rods"/>
+		<attribute key="description" value="No one knows which hell this unholy rod comes from"/>
+		<attribute key="weaponType" value="wand"/>
+		<attribute key="shootType" value="death"/>
+		<attribute key="range" value="15"/>
+		<attribute key="weight" value="2900"/>
+		<attribute key="imbuementslot" value="2">
+			<attribute key="life leech" value="3"/>
+			<attribute key="mana leech" value="3"/>
+			<attribute key="skillboost magic level" value="3"/>
+		</attribute>
+		<attribute key="script" value="moveevent;weapon">
+			<attribute key="level" value="42"/>
+			<attribute key="mana" value="13"/>
+			<attribute key="fromDamage" value="56"/>
+			<attribute key="toDamage" value="74"/>
+			<attribute key="weaponType" value="wand"/>
+			<attribute key="wandType" value="death"/>
+			<attribute key="vocation" value="Druid;true, Elder Druid"/>
+			<attribute key="slot" value="hand"/>
+		</attribute>
 	</item>		
 </items>
