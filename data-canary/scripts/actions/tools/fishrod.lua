@@ -76,7 +76,7 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			elseif rareChance >= 10 then
 				player:addItem(sealootCommon[math.random(#sealootCommon)], 1)
 			elseif rareChance >= 80 then
-				--item:transform() id da vara quebrada quebrou a vara 
+				--item:transform() id da vara quebrada quebrou a vara
 			elseif rareChance >= 90 then
 				--removeItem		-- puxou a vara inteira	pra agua
 			elseif rareChance >= 95 then
