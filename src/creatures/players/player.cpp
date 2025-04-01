@@ -392,7 +392,7 @@ int32_t Player::getWeaponSkill(const std::shared_ptr<Item> &item) const {
 int32_t Player::getArmor() const {
 	int32_t armor = 0;
 
-	static constexpr Slots_t armorSlots[] = { CONST_SLOT_HEAD, CONST_SLOT_NECKLACE, CONST_SLOT_ARMOR, CONST_SLOT_LEGS, CONST_SLOT_FEET, CONST_SLOT_RING, CONST_SLOT_AMMO };
+	static constexpr Slots_t armorSlots[] = { CONST_SLOT_HEAD, CONST_SLOT_NECKLACE, CONST_SLOT_ARMOR, CONST_SLOT_LEGS, CONST_SLOT_FEET, CONST_SLOT_RING, CONST_SLOT_AMMO, CONST_SLOT_GLOVES };
 	for (const Slots_t &slot : armorSlots) {
 		const auto &inventoryItem = inventory[slot];
 		if (inventoryItem) {
@@ -4055,7 +4055,7 @@ ReturnValue Player::queryAdd(int32_t index, const std::shared_ptr<Thing> &thing,
 	if (allowPutItemsOnAmmoSlot && index == CONST_SLOT_AMMO) {
 		ret = RETURNVALUE_NOERROR;
 	} else {
-		if ((slotPosition & SLOTP_HEAD) || (slotPosition & SLOTP_NECKLACE) || (slotPosition & SLOTP_BACKPACK) || (slotPosition & SLOTP_ARMOR) || (slotPosition & SLOTP_LEGS) || (slotPosition & SLOTP_FEET) || (slotPosition & SLOTP_RING)) {
+		if ((slotPosition & SLOTP_HEAD) || (slotPosition & SLOTP_NECKLACE) || (slotPosition & SLOTP_BACKPACK) || (slotPosition & SLOTP_ARMOR) || (slotPosition & SLOTP_LEGS) || (slotPosition & SLOTP_FEET) || (slotPosition & SLOTP_RING) || (slotPosition & SLOTP_GLOVES)) {
 			ret = RETURNVALUE_CANNOTBEDRESSED;
 		} else if (slotPosition & SLOTP_TWO_HAND) {
 			ret = RETURNVALUE_PUTTHISOBJECTINBOTHHANDS;
@@ -4196,6 +4196,13 @@ ReturnValue Player::queryAdd(int32_t index, const std::shared_ptr<Thing> &thing,
 
 		case CONST_SLOT_RING: {
 			if (slotPosition & SLOTP_RING) {
+				ret = RETURNVALUE_NOERROR;
+			}
+			break;
+		}
+
+		case CONST_SLOT_GLOVES: {
+			if (slotPosition & SLOTP_GLOVES) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
@@ -5273,6 +5280,7 @@ std::vector<std::shared_ptr<Item>> Player::getEquippedItems() const {
 		CONST_SLOT_LEGS,
 		CONST_SLOT_FEET,
 		CONST_SLOT_RING,
+		CONST_SLOT_GLOVES,
 	};
 
 	std::vector<std::shared_ptr<Item>> valid_items;

@@ -1671,6 +1671,8 @@ Item::getDescriptions(const ItemType &it, const std::shared_ptr<Item> &item /*= 
 			descriptions.emplace_back("Body Position", "finger");
 		} else if (it.slotPosition & SLOTP_AMMO) {
 			descriptions.emplace_back("Body Position", "extra slot");
+		} else if (it.slotPosition & SLOTP_GLOVES) {
+			descriptions.emplace_back("Body Position", "gloves");
 		} else if (it.slotPosition & SLOTP_TWO_HAND) {
 			descriptions.emplace_back("Body Position", "both hands");
 		} else if ((it.slotPosition & SLOTP_LEFT) && it.weaponType != WEAPON_SHIELD) {
@@ -2018,6 +2020,8 @@ Item::getDescriptions(const ItemType &it, const std::shared_ptr<Item> &item /*= 
 			descriptions.emplace_back("Body Position", "finger");
 		} else if (it.slotPosition & SLOTP_AMMO) {
 			descriptions.emplace_back("Body Position", "extra slot");
+		} else if (it.slotPosition & SLOTP_GLOVES) {
+			descriptions.emplace_back("Body Position", "gloves");
 		} else if (it.slotPosition & SLOTP_TWO_HAND) {
 			descriptions.emplace_back("Body Position", "both hands");
 		} else if ((it.slotPosition & SLOTP_LEFT) && it.weaponType != WEAPON_SHIELD) {

@@ -1702,6 +1702,8 @@ std::string getObjectCategoryName(ObjectCategory_t category) {
 			return "Potions";
 		case OBJECTCATEGORY_RINGS:
 			return "Rings";
+		case OBJECTCATEGORY_GLOVES:
+			return "Gloves";
 		case OBJECTCATEGORY_RUNES:
 			return "Runes";
 		case OBJECTCATEGORY_SHIELDS:
@@ -1768,6 +1770,7 @@ bool isValidObjectCategory(ObjectCategory_t category) {
 		OBJECTCATEGORY_CREATUREPRODUCTS,
 		OBJECTCATEGORY_QUIVERS,
 		OBJECTCATEGORY_GOLD,
+		OBJECTCATEGORY_GLOVES,
 		OBJECTCATEGORY_DEFAULT,
 	};
 	return valid.contains(category);

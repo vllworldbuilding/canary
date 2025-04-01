@@ -301,6 +301,8 @@ void ItemParse::parseSlotType(const std::string &stringValue, pugi::xml_attribut
 			itemType.slotPosition |= SLOTP_RING;
 		} else if (subStringValue == "ammo") {
 			itemType.slotPosition |= SLOTP_AMMO;
+		} else if (subStringValue == "gloves") {
+			itemType.slotPosition |= SLOTP_GLOVES;
 		} else if (subStringValue == "hand") {
 			itemType.slotPosition |= SLOTP_HAND;
 		} else {
@@ -1045,6 +1047,8 @@ void ItemParse::createAndRegisterScript(ItemType &itemType, pugi::xml_node attri
 					moveevent->setSlot(SLOTP_RING);
 				} else if (slotName == "ammo") {
 					moveevent->setSlot(SLOTP_AMMO);
+				} else if (slotName == "gloves") {
+					moveevent->setSlot(SLOTP_GLOVES);
 				} else if (slotName == "two-handed") {
 					moveevent->setSlot(SLOTP_TWO_HAND);
 				} else {

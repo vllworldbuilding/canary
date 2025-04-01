@@ -3303,6 +3303,8 @@ ObjectCategory_t Game::getObjectCategory(const ItemType &it) {
 			category = OBJECTCATEGORY_BOOTS;
 		} else if ((it.slotPosition & SLOTP_RING) != 0) {
 			category = OBJECTCATEGORY_RINGS;
+		}	else if ((it.slotPosition & SLOTP_GLOVES) != 0) {
+			category = OBJECTCATEGORY_GLOVES;
 		}
 	} else if (it.type == ITEM_TYPE_RUNE) {
 		category = OBJECTCATEGORY_RUNES;
@@ -3379,6 +3381,8 @@ Slots_t getSlotType(const ItemType &it) {
 			slot = CONST_SLOT_RING;
 		} else if (slotPosition & SLOTP_AMMO) {
 			slot = CONST_SLOT_AMMO;
+		} else if (slotPosition & SLOTP_GLOVES) {
+			slot = CONST_SLOT_GLOVES;
 		} else if (slotPosition & SLOTP_TWO_HAND || slotPosition & SLOTP_LEFT) {
 			slot = CONST_SLOT_LEFT;
 		}

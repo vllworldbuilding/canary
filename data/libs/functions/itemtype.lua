@@ -9,6 +9,7 @@ local slotBits = {
 	[CONST_SLOT_FEET] = SLOTP_FEET,
 	[CONST_SLOT_RING] = SLOTP_RING,
 	[CONST_SLOT_AMMO] = SLOTP_AMMO,
+	[CONST_SLOT_GLOVES] = SLOTP_GLOVES,	
 }
 
 function ItemType.usesSlot(self, slot)

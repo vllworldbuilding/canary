@@ -191,6 +191,7 @@ void LuaEnums::initOthersEnums(lua_State* L) {
 	registerEnum(L, SLOTP_AMMO);
 	registerEnum(L, SLOTP_DEPOT);
 	registerEnum(L, SLOTP_TWO_HAND);
+	registerEnum(L, SLOTP_GLOVES);
 
 	// Spells
 	registerEnum(L, SPELL_INSTANT);
@@ -350,6 +351,7 @@ void LuaEnums::initConditionIdEnums(lua_State* L) {
 	registerEnum(L, CONDITIONID_FEET);
 	registerEnum(L, CONDITIONID_RING);
 	registerEnum(L, CONDITIONID_AMMO);
+	registerEnum(L, CONDITIONID_GLOVES);
 }
 
 void LuaEnums::initConditionParamEnums(lua_State* L) {
@@ -709,6 +711,7 @@ void LuaEnums::initConstSlotEnums(lua_State* L) {
 	registerEnum(L, CONST_SLOT_RING);
 	registerEnum(L, CONST_SLOT_AMMO);
 	registerEnum(L, CONST_SLOT_STORE_INBOX);
+	registerEnum(L, CONST_SLOT_GLOVES);
 	registerEnum(L, CONST_SLOT_LAST);
 }
 
