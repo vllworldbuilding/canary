@@ -80974,16 +80974,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="47379" article="a" name="large obelisk">
 		<attribute key="primarytype" value="pillars"/>
-	
-	<!--novos items-->
-	<item id="60000" article="a" name="adamantine ore">
-		<attribute key="primarytype" value="creature products"/>
-		<attribute key="showCount" value="0"/>
-		<attribute key="weight" value="200"/>
 	</item>
-
-
-</items>
 
 	<!--novos items-->
 
