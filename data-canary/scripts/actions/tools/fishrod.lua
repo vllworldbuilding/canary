@@ -3,7 +3,7 @@ local riverIds = { 21302, 21303, 21304, 21305, 21306, 21307, 21311, 21312, 21313
 local sealootTrash = {} --just trash
 local sealootCommon = { 60048 } --common loot from sea: hering
 local sealootRare = { 60050, 3581 } --rare loot from sea: bluefin, shrimp
-local sealootVeryRare = { 60047 } --veryrare loot from sea: codfish 
+local sealootVeryRare = { 60047 } --veryrare loot from sea: codfish
 local riverlootFood = { 60051, 32044, 32045 } --just food loot from river: saint-peter, small bass, tiny bass
 local riverlootCommon = { 32043, 60056, 7159 } --common loot from river: bass, black-bass, green perch
 local sealootVeryRare = { 60047 } --veryrare loot from sea: codfish
@@ -12,8 +12,6 @@ local riverlootCommon = { 60051, 32044, 32045, 32043, 60056, 7159 } --common loo
 local riverlootRare = { 60055, 60052, 3580, 7158 } --rare loot from river: salmon, trout, northern pike, rainbow trout
 local riverlootVeryRare = { 60049 } --veryrare loot from river: sockeye
 local monsters = { "Shark", "Crab" }
-
-
 
 local specials = {
 	chances = {
@@ -42,7 +40,7 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
---[[	SPAWN DE SHARKS OU OUTRAS CRIATURAS.
+	--[[	SPAWN DE SHARKS OU OUTRAS CRIATURAS.
 	if useWorms and targetId == 7236 and player:removeItem("worm", 1) then
 		if math.random(10) >= 3 then
 			Game.createMonster("Shark", Position(playerPosition))
@@ -101,7 +99,7 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			elseif rareChance >= 10 then
 				player:addItem(sealootCommon[math.random(#sealootCommon)], 1)
 			elseif rareChance >= 80 then
-				--item:transform() id da vara quebrada quebrou a vara 
+				--item:transform() id da vara quebrada quebrou a vara
 			elseif rareChance >= 90 then
 				--removeItem		-- puxou a vara inteira	pra agua
 			elseif rareChance >= 95 then

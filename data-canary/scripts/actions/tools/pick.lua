@@ -3,7 +3,7 @@ local earthIds = { 21302, 21303, 21304, 21305, 21306, 21307, 21311, 21312, 21313
 local mountainlootOre = { 60048 } --just food loot from sea: hering
 local mountainlootCommon = { 60048 } --common loot from sea: hering
 local mountainlootRare = { 60050, 3581 } --rare loot from sea: bluefin, shrimp
-local mountainlootVeryRare = { 60047 } --veryrare loot from sea: codfish 
+local mountainlootVeryRare = { 60047 } --veryrare loot from sea: codfish
 local earthlootOre = { 60051, 32044, 32045 } --just food loot from river: saint-peter, small bass, tiny bass
 local earthlootCommon = { 32043, 60056, 7159 } --common loot from river: bass, black-bass, green perch
 local earthlootRare = { 60055, 60052, 3580, 7158 } --rare loot from river: salmon, trout, northern pike, rainbow trout
@@ -37,7 +37,7 @@ function mining.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end]]
 
 		if table.contains(mountainIds, target.itemid) then
-			player:addSkillTries(SKILL_MINING, 1, true)	
+			player:addSkillTries(SKILL_MINING, 1, true)
 			local rareChance = math.random(100)
 			if rareChance == 1 then
 				toPosition:sendMagicEffect(CONST_ME_WATERSPLASH)
