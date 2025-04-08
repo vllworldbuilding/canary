@@ -60,7 +60,7 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		item:transform()
 		item:decay()
 		return true
-	end
+	end]]
 
 	if math.random(100) <= math.min(math.max(10 + (player:getEffectiveSkillLevel(SKILL_FISHING) - 10) * 0.597, 10), 50) then
 		if useWorms and not player:removeItem("worm", 1) then
