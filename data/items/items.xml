@@ -80974,4 +80974,625 @@ Granted by TibiaGoals.com"/>
 	<item id="47379" article="a" name="large obelisk">
 		<attribute key="primarytype" value="pillars"/>
 	</item>
+
+	<!--novos items-->
+
+	<item id="60000" article="a" name="leather trousers">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="5600"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+	<item id="60001" article="a" name="leather cuirass">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="12000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>	
+	<item id="60002" name="leather chausses">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="1800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+		<item id="60003" name="lederhosen">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="1800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+	<item id="60004" article="a" name="leather jerkin">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>	
+	<item id="60005" article="a" name="leather mask">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>
+	<item id="60006" article="a" name="leather hood">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>
+	<item id="60007" article="a" name="leather bascinet">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60008" article="a" name="leather spangenhelm">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60009" article="a" name="leather boots">
+		<attribute key="primarytype" value="boots"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="900"/>
+		<attribute key="imbuementslot" value="1">
+			<attribute key="increase speed" value="3"/>
+		</attribute>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="feet"/>
+		</attribute>
+	</item>	
+	<item id="60010" article="an" name="iron plate boots">
+		<attribute key="primarytype" value="boots"/>
+		<attribute key="armor" value="2"/>
+		<attribute key="weight" value="900"/>
+		<attribute key="imbuementslot" value="1">
+			<attribute key="increase speed" value="3"/>
+		</attribute>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="feet"/>
+		</attribute>
+	</item>	
+	<item id="60011" article="an" name="iron plate legs">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="3"/>
+		<attribute key="weight" value="1800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+	<item id="60012" article="an" name="iron plate armor">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="3"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>	
+	<item id="60013" article="an" name="iron plate helmet">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60014" article="a" name="blue wizard hat">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60015" article="a" name="blue shoes">
+		<attribute key="primarytype" value="boots"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="900"/>
+		<attribute key="imbuementslot" value="1">
+			<attribute key="increase speed" value="3"/>
+		</attribute>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="feet"/>
+		</attribute>
+	</item>	
+	<item id="60016" name="blue silk pants">
+		<attribute key="primarytype" value="legs"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="1800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="legs"/>
+		</attribute>
+	</item>
+	<item id="60017" article="a" name="blue silk robe">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>	
+	<item id="60018" article="a" name="wizard staff">
+		<attribute key="description" value="Surges of energy rush through the tip of this wand"/>
+		<attribute key="weaponType" value="wand"/>
+		<attribute key="shootType" value="energy"/>
+		<attribute key="range" value="3"/>
+		<attribute key="weight" value="1900"/>
+		<attribute key="script" value="moveevent;weapon">
+			<attribute key="level" value="6"/>
+			<attribute key="mana" value="1"/>
+			<attribute key="fromDamage" value="8"/>
+			<attribute key="toDamage" value="18"/>
+			<attribute key="weaponType" value="wand"/>
+			<attribute key="wandType" value="energy"/>
+			<attribute key="vocation" value="Sorcerer;true, Master Sorcerer"/>
+			<attribute key="slot" value="hand"/>
+		</attribute>
+	</item>	
+	<item id="60019" article="a" name="1">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60020" article="a" name="22t">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>	
+	<item id="60021" article="a" name="3">
+		<attribute key="primarytype" value="helmets"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="2200"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="head"/>
+		</attribute>
+	</item>
+	<item id="60023" article="a" name="green linen shirt">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>
+	<item id="60025" article="a" name="green cotton shirt">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>
+	<item id="60026" article="a" name="brown linen shirt">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>
+	<item id="60027" article="a" name="white linen shirt">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="armor" value="1"/>
+		<attribute key="weight" value="6000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>								
+	<item id="60030" article="The" name="Orcrist">
+		<attribute key="primarytype" value="sword weapons"/>
+		<attribute key="weaponType" value="sword"/>
+		<attribute key="attack" value="14"/>
+		<attribute key="extradef" value="1"/>
+		<attribute key="defense" value="12"/>
+		<attribute key="weight" value="3500"/>
+		<attribute key="imbuementslot" value="2">
+			<attribute key="elemental damage" value="3"/>
+			<attribute key="life leech" value="3"/>
+			<attribute key="mana leech" value="3"/>
+			<attribute key="critical hit" value="3"/>
+			<attribute key="skillboost sword" value="3"/>
+		</attribute>
+		<attribute key="script" value="moveevent;weapon">
+			<attribute key="weaponType" value="sword"/>
+			<attribute key="slot" value="hand"/>
+		</attribute>
+	</item>
+	<item id="60032" article="an" name="chunk of copper">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60033" article="an" name="copper lump">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>		
+	<item id="60034" article="an" name="copper nugget">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60035" article="an" name="copper grain" plural="copper grains">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60036" article="an" name="gold chunk">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60037" article="an" name="gold lump">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>
+	<item id="60038" article="an" name="gold nugget">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>		
+	<item id="60039" article="an" name="gold grain">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>		
+	<item id="60040" article="an" name="silver chunk">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60041" article="an" name="silver ore lump">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>		
+	<item id="60042" article="an" name="silver nugget">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>	
+	<item id="60043" article="an" name="silver grain" plural="silver grains">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="showCount" value="0"/>
+		<attribute key="weight" value="200"/>
+	</item>							
+	<item id="60047" name="codfish" plural="codfishes">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>		
+	<item id="60048" name="herring" plural="herrings">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>
+	<item id="60049" name="sockeye" plural="sockeyes">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>	
+	<item id="60050" name="bluefin" plural="bluefins">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>
+	<item id="60051" name="Saint Peter" plural="Saint Peter fishes">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>	
+	<item id="60052" name="trout" plural="trouts">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>	
+	<item id="60055" name="salmon" plural="salmons">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>		
+	<item id="60056" name="black bass" plural="black bass">
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="520"/>
+	</item>
+	<item id="60057" article="a" name="dead orc">
+		<attribute key="fluidsource" value="blood"/>
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60058"/>
+		<attribute key="containersize" value="10"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60058" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60059"/>
+		<attribute key="weight" value="440925"/>
+	</item>	
+	<item id="60059" article="a" name="worthless wood">
+		<attribute key="duration" value="60"/>
+		<attribute key="decayTo" value="0"/>
+		<attribute key="weight" value="2646"/>
+	</item>	
+	<item id="60060" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60061"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60061" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="4317"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60068" article="a" name="hunting knife">
+		<attribute key="primarytype" value="sword weapons"/>
+		<attribute key="weaponType" value="sword"/>
+		<attribute key="attack" value="5"/>
+		<attribute key="defense" value="5"/>
+		<attribute key="weight" value="420"/>
+		<attribute key="script" value="moveevent;weapon">
+			<attribute key="weaponType" value="sword"/>
+			<attribute key="slot" value="hand"/>
+		</attribute>
+	</item>
+	<item id="60069" article="a" name="dead dog">
+		<attribute key="fluidsource" value="blood"/>
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="60072"/>
+	</item>
+	<item id="60070" article="a" name="dead dog">
+		<attribute key="fluidsource" value="blood"/>
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="60071"/>
+	</item>
+	<item id="60071" article="a" name="dead dog">
+		<attribute key="fluidsource" value="blood"/>
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="0"/>
+	</item>	
+	<item id="60072" article="a" name="dead dog">
+		<attribute key="fluidsource" value="blood"/>
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="0"/>
+	</item>	
+	<item id="60073" article="a" name="gnome cap">
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="0"/>
+	</item>	
+	<item id="60074" article="a" name="green hat">
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="0"/>
+	</item>				
+	<item id="60075" article="a" name="dead baphomet">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="0"/>
+		<attribute key="containersize" value="20"/>
+	</item>
+	<item id="60076" article="a" name="magma blade">
+		<attribute key="primarytype" value="sword weapons"/>
+		<attribute key="weaponType" value="sword"/>
+		<attribute key="attack" value="5"/>
+		<attribute key="defense" value="5"/>
+		<attribute key="weight" value="420"/>
+		<attribute key="script" value="moveevent;weapon">
+			<attribute key="weaponType" value="sword"/>
+			<attribute key="slot" value="hand"/>
+		</attribute>
+	</item>	
+	<item id="60077" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60078"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60078" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="4317"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60079" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60080"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60080" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="4317"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60081" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60082"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60082" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="4317"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60083" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60084"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60084" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="4317"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60085" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60086"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60086" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="4317"/>
+		<attribute key="weight" value="440925"/>
+	</item>	
+	<item id="60087" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60088"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60088" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="4317"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60089" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60090"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60090" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60091"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60091" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="0"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60092" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60093"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60093" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="4317"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60094" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60095"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60095" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="60096"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60096" article="a" name="dead orc">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="0"/>
+		<attribute key="weight" value="440925"/>
+	</item>
+	<item id="60104" article="a" name="tunic">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="weight" value="1000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>
+	<item id="60110" article="a" name="tunic">
+		<attribute key="primarytype" value="armors"/>
+		<attribute key="weight" value="1000"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="armor"/>
+		</attribute>
+	</item>
+	<item id="60286" article="a" name="bottle of red wine">
+		<attribute key="primarytype" value="kitchen tools"/>
+		<attribute key="allowpickUpAble" value="1"/>
+		<attribute key="weight" value="380"/>
+	</item>									
+	<item fromid="60287" toid="60289" article="a" name="bottle of white wine">
+		<attribute key="primarytype" value="kitchen tools"/>
+		<attribute key="allowpickUpAble" value="1"/>
+		<attribute key="weight" value="380"/>
+	</item>
+	<item id="60339" article="a" name="oak">
+		<attribute key="primarytype" value="trees"/>
+	</item>
+	<item id="60340" article="a" name="almond tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>	
+	<item id="60341" article="a" name="ebony tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>		
+	<item id="60342" article="a" name="chestnut tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>		
+	<item id="60343" article="a" name="cinnamon tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>
+	<item id="60344" article="a" name="apple tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>
+	<item id="60345" article="a" name="cedar tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>		
+	<item id="60346" article="a" name="mahogany tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>		
+	<item id="60347" article="a" name="pomegranate tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>	
+	<item id="60348" article="a" name="olive tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>			
+	<item id="60349" article="a" name="sweetgum tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>	
+	<item id="60350" article="a" name="fig tree">
+		<attribute key="primarytype" value="trees"/>
+	</item>
+	<item id="60370" article="a" name="bamboo rod">
+		<attribute key="primarytype" value="natural products"/>
+		<attribute key="weight" value="3"/>
+	</item>
+	<item id="60371" article="a" name="bamboo rod and line">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="3"/>
+	</item>
+	<item id="60372" article="a" name="hazel rod">
+		<attribute key="primarytype" value="natural products"/>
+		<attribute key="weight" value="4"/>
+	</item>
+	<item id="60373" article="a" name="hazel rod and line">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="4"/>
+	</item>
+	<item id="60374" article="a" name="fish hook">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="1"/>
+	</item>
+	<item id="60375" article="a" name="twin hook">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="1"/>
+	</item>		
+	<item id="60376" article="a" name="twin hook duplicated">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="1"/>
+	</item>					
+	<item id="60377" article="a" name="fishing line">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="This is crafted from silk."/>		
+		<attribute key="weight" value="1"/>
+	</item>	
+	<item id="60378" article="a" name="blue fishing line">
+		<attribute key="description" value="This is made from unicorn mane."/>		
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="weight" value="1"/>
+	</item>
+	<item fromid="60379" toid="60389" name="Rhamons Items"/>
 </items>
