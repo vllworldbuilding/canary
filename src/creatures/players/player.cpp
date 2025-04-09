@@ -156,7 +156,7 @@ std::string Player::getDescription(int32_t lookDistance) {
 		} else if (vocation->getId() != VOCATION_NONE) {
 			s << " You are " << vocation->getVocDescription() << '.';
 		} else {
-			s << " You have no vocation.";
+			s << " You are a villager.";
 		}
 
 		if (!loyaltyTitle.empty()) {
@@ -179,7 +179,7 @@ std::string Player::getDescription(int32_t lookDistance) {
 		} else if (vocation->getId() != VOCATION_NONE) {
 			s << " " << getSubjectVerb() << " " << vocation->getVocDescription() << '.';
 		} else {
-			s << " has no vocation.";
+			s << " is a villager.";
 		}
 
 		if (!loyaltyTitle.empty()) {
