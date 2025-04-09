@@ -1387,7 +1387,7 @@ Item::getDescriptions(const ItemType &it, const std::shared_ptr<Item> &item /*= 
 				skillBoost = true;
 			}
 
-			for (uint8_t i = SKILL_FIRST; i <= SKILL_FISHING; i++) {
+			for (uint8_t i = SKILL_FIRST; i <= SKILL_LANGUAGES; i++) {
 				if (!it.abilities->skills[i]) {
 					continue;
 				}
@@ -1796,7 +1796,7 @@ Item::getDescriptions(const ItemType &it, const std::shared_ptr<Item> &item /*= 
 				skillBoost = true;
 			}
 
-			for (uint8_t i = SKILL_FIRST; i <= SKILL_FISHING; i++) {
+			for (uint8_t i = SKILL_FIRST; i <= SKILL_LANGUAGES; i++) {
 				if (!it.abilities->skills[i]) {
 					continue;
 				}
@@ -2270,7 +2270,7 @@ std::string Item::parseShowAttributesDescription(const std::shared_ptr<Item> &it
 		}
 
 		if (itemType.abilities) {
-			for (uint8_t i = SKILL_FIRST; i <= SKILL_FISHING; i++) {
+			for (uint8_t i = SKILL_FIRST; i <= SKILL_LANGUAGES; i++) {
 				if (!itemType.abilities->skills[i]) {
 					continue;
 				}
@@ -2568,7 +2568,7 @@ std::string Item::getDescription(const ItemType &it, int32_t lookDistance, const
 			}
 
 			if (it.abilities) {
-				for (uint8_t i = SKILL_FIRST; i <= SKILL_FISHING; i++) {
+				for (uint8_t i = SKILL_FIRST; i <= SKILL_LANGUAGES; i++) {
 					if (!it.abilities->skills[i]) {
 						continue;
 					}
@@ -2840,7 +2840,7 @@ std::string Item::getDescription(const ItemType &it, int32_t lookDistance, const
 			}
 
 			if (it.abilities) {
-				for (uint8_t i = SKILL_FIRST; i <= SKILL_FISHING; i++) {
+				for (uint8_t i = SKILL_FIRST; i <= SKILL_LANGUAGES; i++) {
 					if (!it.abilities->skills[i]) {
 						continue;
 					}

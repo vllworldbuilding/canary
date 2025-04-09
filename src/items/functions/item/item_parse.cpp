@@ -460,6 +460,34 @@ void ItemParse::parseSkills(const std::string &stringValue, pugi::xml_attribute 
 		itemType.getAbilities().skills[SKILL_DISTANCE] = pugi::cast<int32_t>(valueAttribute.value());
 	} else if (stringValue == "skillfish") {
 		itemType.getAbilities().skills[SKILL_FISHING] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillmining") {
+		itemType.getAbilities().skills[SKILL_MINING] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillmetalworking") {
+		itemType.getAbilities().skills[SKILL_METALWORKING] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillwoodworking") {
+		itemType.getAbilities().skills[SKILL_WOODWORKING] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillhunting") {
+		itemType.getAbilities().skills[SKILL_HUNTING] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillfarming") {
+		itemType.getAbilities().skills[SKILL_FARMING] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillcooking") {
+		itemType.getAbilities().skills[SKILL_COOKING] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillcrafting") {
+		itemType.getAbilities().skills[SKILL_CRAFTING] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillherblore") {
+		itemType.getAbilities().skills[SKILL_HERBLORE] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillalchemy") {
+		itemType.getAbilities().skills[SKILL_ALCHEMY] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillarchaeology") {
+		itemType.getAbilities().skills[SKILL_ARCHAEOLOGY] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillmusic") {
+		itemType.getAbilities().skills[SKILL_MUSIC] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skilllore") {
+		itemType.getAbilities().skills[SKILL_LORE] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skillinscription") {
+		itemType.getAbilities().skills[SKILL_INSCRIPTION] = pugi::cast<int32_t>(valueAttribute.value());
+	} else if (stringValue == "skilllanguages") {
+		itemType.getAbilities().skills[SKILL_LANGUAGES] = pugi::cast<int32_t>(valueAttribute.value());
 	} else if (stringValue == "skillshield") {
 		itemType.getAbilities().skills[SKILL_SHIELD] = pugi::cast<int32_t>(valueAttribute.value());
 	} else if (stringValue == "skillfist") {
