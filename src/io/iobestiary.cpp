@@ -535,7 +535,7 @@ void IOBestiary::sendBuyCharmRune(const std::shared_ptr<Player> &player, uint8_t
 		}
 
 		if (!g_game().removeMoney(player, fee, 0, true)) {
-			player->sendFYIBox("You don't have enough gold.");
+			player->sendFYIBox("You don't have enough copper.");
 			return;
 		}
 
@@ -549,7 +549,7 @@ void IOBestiary::sendBuyCharmRune(const std::shared_ptr<Player> &player, uint8_t
 		}
 
 		if (!g_game().removeMoney(player, resetAllCharmsCost, 0, true)) {
-			player->sendFYIBox("You don't have enough gold.");
+			player->sendFYIBox("You don't have enough copper.");
 			return;
 		}
 

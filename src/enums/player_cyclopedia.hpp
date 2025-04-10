@@ -24,7 +24,7 @@ enum class CyclopediaBadge_t : uint8_t {
 
 enum CyclopediaTitle_t : uint8_t {
 	NOTHING = 0,
-	GOLD,
+	COPPER,
 	MOUNTS,
 	OUTFITS,
 	LEVEL,

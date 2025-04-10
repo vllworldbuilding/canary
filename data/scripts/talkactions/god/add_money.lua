@@ -42,13 +42,13 @@ function addMoney.onSay(player, words, param)
 		return true
 	end
 
-	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Successfull added " .. amount .. " gold coins to " .. name .. ".")
+	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Successfull added " .. amount .. " copper coins to " .. name .. ".")
 	local targetPlayer = Player(name)
 	if targetPlayer then
-		targetPlayer:sendTextMessage(MESSAGE_EVENT_ADVANCE, "" .. player:getName() .. " added " .. amount .. " gold coins to your character.")
+		targetPlayer:sendTextMessage(MESSAGE_EVENT_ADVANCE, "" .. player:getName() .. " added " .. amount .. " copper coins to your character.")
 	end
 	-- Distro log
-	logger.info("{} added {} gold coins to {} player", player:getName(), amount, name)
+	logger.info("{} added {} copper coins to {} player", player:getName(), amount, name)
 	return true
 end
 

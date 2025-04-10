@@ -6789,7 +6789,7 @@
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="10"/>
 	</item>
-	<item id="3031" article="a" name="gold coin">
+	<item id="3031" article="a" name="copper coin">
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="10"/>
 	</item>
@@ -6806,7 +6806,7 @@
 		<attribute key="description" value="There are many rumours about these magic gems"/>
 		<attribute key="weight" value="20"/>
 	</item>
-	<item id="3035" article="a" name="platinum coin">
+	<item id="3035" article="a" name="silver coin">
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="10"/>
 	</item>
@@ -6838,7 +6838,7 @@
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="20"/>
 	</item>
-	<item id="3043" article="a" name="crystal coin">
+	<item id="3043" article="a" name="gold coin">
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="10"/>
 	</item>

@@ -80,7 +80,7 @@ if NpcHandler == nil then
 			-- Leave empty for no send message
 			[MESSAGE_GREET] = "Greetings, |PLAYERNAME|.",
 			[MESSAGE_FAREWELL] = "Good bye, |PLAYERNAME|.",
-			[MESSAGE_BUY] = "Do you want to buy |ITEMCOUNT| |ITEMNAME| for |TOTALCOST| gold coins?",
+			[MESSAGE_BUY] = "Do you want to buy |ITEMCOUNT| |ITEMNAME| for |TOTALCOST| copper coins?",
 			[MESSAGE_MISSINGMONEY] = "You don't have enough money.",
 			[MESSAGE_NEEDMONEY] = "You don't have enough money.",
 			[MESSAGE_MISSINGITEM] = "You don't have so many.",

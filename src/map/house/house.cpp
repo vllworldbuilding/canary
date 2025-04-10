@@ -165,11 +165,11 @@ void House::updateDoorDescription() const {
 		const int32_t housePrice = getPrice();
 		if (housePrice != -1) {
 			if (g_configManager().getBoolean(HOUSE_PURSHASED_SHOW_PRICE) || owner == 0) {
-				ss << " It costs " << formatNumber(getPrice()) << " gold coins.";
+				ss << " It costs " << formatNumber(getPrice()) << " copper coins.";
 			}
 			std::string strRentPeriod = asLowerCaseString(g_configManager().getString(HOUSE_RENT_PERIOD));
 			if (strRentPeriod != "never") {
-				ss << " The rent cost is " << formatNumber(getRent()) << " gold coins and it is billed " << strRentPeriod << ".";
+				ss << " The rent cost is " << formatNumber(getRent()) << " copper coins and it is billed " << strRentPeriod << ".";
 			}
 		}
 	}
@@ -973,7 +973,7 @@ void Houses::payHouses(RentPeriod_t rentPeriod) const {
 				}
 
 				std::ostringstream ss;
-				ss << "Warning! \nThe " << period << " rent of " << house->getRent() << " gold for your house \"" << house->getName() << "\" is payable. Have it within " << daysLeft << " days or you will lose this house.";
+				ss << "Warning! \nThe " << period << " rent of " << house->getRent() << " copper for your house \"" << house->getName() << "\" is payable. Have it within " << daysLeft << " days or you will lose this house.";
 				letter->setAttribute(ItemAttribute_t::TEXT, ss.str());
 				const auto &playerInbox = player->getInbox();
 				g_game().internalAddItem(playerInbox, letter, INDEX_WHEREEVER, FLAG_NOLIMIT);

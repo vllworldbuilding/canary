@@ -105,7 +105,7 @@ function KeywordHandler:addSpellKeyword(keys, parameters)
 
 	local spellKeyword = self:addKeyword(localKeys, StdModule.say, {
 		npcHandler = npcHandler,
-		text = string.format("Do you want to learn the spell '%s' for %s?\z ", spellName, price > 0 and price .. " gold" or "free"),
+		text = string.format("Do you want to learn the spell '%s' for %s?\z ", spellName, price > 0 and price .. " copper" or "free"),
 	}, function(player)
 		-- This will register for all client id vocations
 		local vocationClientId = player:getVocation():getBaseId()

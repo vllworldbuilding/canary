@@ -104,7 +104,7 @@ function Player.transferMoneyTo(self, target, amount)
 
 	local targetPlayer = Player(target)
 	if targetPlayer then
-		targetPlayer:sendTextMessage(MESSAGE_LOOK, self:getName() .. " has transferred " .. FormatNumber(amount) .. " gold coins to you.")
+		targetPlayer:sendTextMessage(MESSAGE_LOOK, self:getName() .. " has transferred " .. FormatNumber(amount) .. " copper coins to you.")
 	end
 	return true
 end
@@ -120,7 +120,7 @@ function Player.removeMoneyBank(self, amount)
 	if amount <= inventoryMoney then
 		self:removeMoney(amount)
 		if amount > 0 then
-			self:sendTextMessage(MESSAGE_TRADE, ("Paid %d gold from inventory."):format(amount))
+			self:sendTextMessage(MESSAGE_TRADE, ("Paid %d copper from inventory."):format(amount))
 		end
 		return true
 	end
@@ -136,7 +136,7 @@ function Player.removeMoneyBank(self, amount)
 		Bank.debit(self, remainingAmount)
 
 		self:setBankBalance(bankBalance - remainingAmount)
-		self:sendTextMessage(MESSAGE_TRADE, ("Paid %s from inventory and %s gold from bank account. Your account balance is now %s gold."):format(FormatNumber(amount - remainingAmount), FormatNumber(remainingAmount), FormatNumber(self:getBankBalance())))
+		self:sendTextMessage(MESSAGE_TRADE, ("Paid %s from inventory and %s copper from bank account. Your account balance is now %s copper."):format(FormatNumber(amount - remainingAmount), FormatNumber(remainingAmount), FormatNumber(self:getBankBalance())))
 		return true
 	end
 	return false
