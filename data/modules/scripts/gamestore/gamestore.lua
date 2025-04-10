@@ -6414,7 +6414,7 @@ GameStore.Categories = {
 				price = 5,
 				itemtype = 23722,
 				charges = 500,
-				description = "<i>Changes either a stack of 100 gold pieces into 1 platinum coin, or a stack of 100 platinum coins into 1 crystal coin!</i>\n\n{character}\n{storeinbox}\n{useicon} use it on a stack of 100 to change it to the superior currency\n{info} usable 500 times a piece",
+				description = "<i>Changes either a stack of 100 gold pieces into 1 silver coin, or a stack of 100 silver coins into 1 gold coin!</i>\n\n{character}\n{storeinbox}\n{useicon} use it on a stack of 100 to change it to the superior currency\n{info} usable 500 times a piece",
 				type = GameStore.OfferTypes.OFFER_TYPE_CHARGES,
 			},
 			{
@@ -6423,7 +6423,7 @@ GameStore.Categories = {
 				price = 900,
 				itemtype = 23721,
 				count = 1,
-				description = "<i>Carries as many gold, platinum or crystal coins as your capacity allows, however, no other items.</i>\n\n{character}\n{storeinbox}\n{once}\n{useicon} use it to open it\n{info} always placed on the first position of your Store inbox",
+				description = "<i>Carries as many copper, silver or gold coins as your capacity allows, however, no other items.</i>\n\n{character}\n{storeinbox}\n{once}\n{useicon} use it to open it\n{info} always placed on the first position of your Store inbox",
 				type = GameStore.OfferTypes.OFFER_TYPE_ITEM_UNIQUE,
 			},
 			{
@@ -6432,7 +6432,7 @@ GameStore.Categories = {
 				price = 15,
 				itemtype = 28525,
 				charges = 500,
-				description = "<i>Changes automatically either a stack of 100 gold pieces into 1 platinum coin, or a stack of 100 platinum coins into 1 crystal coin!</i>\n\n{character}\n{storeinbox}\n{useicon} use it to activate or deactivate the automatic conversion\n{info} converts all stacks of 100 gold or platinum in the inventory whenever it is activated\n{info} deactivated upon purchase\n{info} usable for 500 conversions a piece",
+				description = "<i>Changes automatically either a stack of 100 copper pieces into 1 silver coin, or a stack of 100 silver coins into 1 gold coin!</i>\n\n{character}\n{storeinbox}\n{useicon} use it to activate or deactivate the automatic conversion\n{info} converts all stacks of 100 copper or silver in the inventory whenever it is activated\n{info} deactivated upon purchase\n{info} usable for 500 conversions a piece",
 				type = GameStore.OfferTypes.OFFER_TYPE_CHARGES,
 			},
 			{

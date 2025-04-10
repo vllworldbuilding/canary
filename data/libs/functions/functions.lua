@@ -123,19 +123,19 @@ function getBankMoney(cid, amount)
 	local player = Player(cid)
 	if player:getBankBalance() >= amount then
 		player:setBankBalance(player:getBankBalance() - amount)
-		player:sendTextMessage(MESSAGE_TRADE, "Paid " .. FormatNumber(amount) .. " gold from bank account. Your account balance is now " .. FormatNumber(player:getBankBalance()) .. " gold.")
+		player:sendTextMessage(MESSAGE_TRADE, "Paid " .. FormatNumber(amount) .. " copper from bank account. Your account balance is now " .. FormatNumber(player:getBankBalance()) .. " copper.")
 		return true
 	end
 	return false
 end
 
 function getMoneyWeight(money)
-	local gold = money
-	local crystal = math.floor(gold / 10000)
-	gold = gold - crystal * 10000
-	local platinum = math.floor(gold / 100)
-	gold = gold - platinum * 100
-	return (ItemType(3043):getWeight() * crystal) + (ItemType(3035):getWeight() * platinum) + (ItemType(3031):getWeight() * gold)
+	local copper = money
+	local gold = math.floor(copper / 10000)
+	copper = copper - gold * 10000
+	local silver = math.floor(copper / 100)
+	copper = copper - silver * 100
+	return (ItemType(3043):getWeight() * gold) + (ItemType(3035):getWeight() * silver) + (ItemType(3031):getWeight() * copper)
 end
 
 function getRealDate()

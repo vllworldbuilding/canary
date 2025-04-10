@@ -118,8 +118,8 @@ void PlayerTitle::checkAndUpdateNewTitles() {
 		switch (title.m_type) {
 			case CyclopediaTitle_t::NOTHING:
 				break;
-			case CyclopediaTitle_t::GOLD:
-				manage(checkGold(title.m_amount), title.m_id);
+			case CyclopediaTitle_t::COPPER:
+				manage(checkCopper(title.m_amount), title.m_id);
 				break;
 			case CyclopediaTitle_t::MOUNTS:
 				manage(checkMount(title.m_amount), title.m_id);
@@ -180,7 +180,7 @@ const std::shared_ptr<KV> &PlayerTitle::getUnlockedKV() {
 }
 
 // Title Calculate Functions
-bool PlayerTitle::checkGold(uint32_t amount) const {
+bool PlayerTitle::checkCopper(uint32_t amount) const {
 	return m_player.getBankBalance() >= amount;
 }
 

@@ -57,7 +57,7 @@ LootTypeNames lootTypeNames = {
 	{ "wand", ITEM_TYPE_WAND },
 	{ "creatureproduct", ITEM_TYPE_CREATUREPRODUCT },
 	{ "retrieve", ITEM_TYPE_RETRIEVE },
-	{ "gold", ITEM_TYPE_GOLD },
+	{ "copper", ITEM_TYPE_COPPER },
 	{ "unassigned", ITEM_TYPE_UNASSIGNED },
 };
 

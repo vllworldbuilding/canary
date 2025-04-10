@@ -284,7 +284,7 @@ Blessings.BuyAllBlesses = function(player)
 			player:addBlessing(bless.id, 1)
 		end
 
-		player:sendCancelMessage(string.format("You received the remaining %d blesses for a total of %d gold.", missingBlessAmt, totalCost))
+		player:sendCancelMessage(string.format("You received the remaining %d blesses for a total of %d copper.", missingBlessAmt, totalCost))
 		player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
 	else
 		player:sendCancelMessage(string.format("You don't have enough money. You need %d to buy all blesses.", totalCost))

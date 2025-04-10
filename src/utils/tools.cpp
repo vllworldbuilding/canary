@@ -1291,7 +1291,7 @@ const char* getReturnMessage(ReturnValue value) {
 			return "You cannot move this item into your store inbox as it was not bought in the store.";
 
 		case RETURNVALUE_ITEMCANNOTBEMOVEDPOUCH:
-			return "This item cannot be moved there. You can only place gold, platinum and crystal coins in your gold pouch.";
+			return "This item cannot be moved there. You can only place copper, silver and gold coins in your gold pouch.";
 
 		case RETURNVALUE_ITEMCANNOTBEMOVEDTHERE:
 			return "This item cannot be moved there.";
@@ -1728,8 +1728,8 @@ std::string getObjectCategoryName(ObjectCategory_t category) {
 			return "Tibia Coins";
 		case OBJECTCATEGORY_CREATUREPRODUCTS:
 			return "Creature Products";
-		case OBJECTCATEGORY_GOLD:
-			return "Gold";
+		case OBJECTCATEGORY_COPPER:
+			return "Copper";
 		case OBJECTCATEGORY_QUIVERS:
 			return "Quiver";
 		case OBJECTCATEGORY_DEFAULT:
@@ -1767,7 +1767,7 @@ bool isValidObjectCategory(ObjectCategory_t category) {
 		OBJECTCATEGORY_TIBIACOINS,
 		OBJECTCATEGORY_CREATUREPRODUCTS,
 		OBJECTCATEGORY_QUIVERS,
-		OBJECTCATEGORY_GOLD,
+		OBJECTCATEGORY_COPPER,
 		OBJECTCATEGORY_DEFAULT,
 	};
 	return valid.contains(category);

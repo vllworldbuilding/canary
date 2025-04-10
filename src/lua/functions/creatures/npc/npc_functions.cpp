@@ -626,16 +626,16 @@ int NpcFunctions::luaNpcSellItem(lua_State* L) {
 	std::stringstream ss;
 	const uint64_t itemCost = itemsPurchased * pricePerUnit;
 	const uint64_t backpackCost = backpacksPurchased * shoppingBagPrice;
-	if (npc->getCurrency() == ITEM_GOLD_COIN) {
+	if (npc->getCurrency() == ITEM_COPPER_COIN) {
 		if (!g_game().removeMoney(player, itemCost + backpackCost, 0, true)) {
 			g_logger().error("[NpcFunctions::luaNpcSellItem (removeMoney)] - Player {} have a problem for buy item {} on shop for npc {}", player->getName(), itemId, npc->getName());
 			g_logger().debug("[Information] Player {} bought {} x item {} on shop for npc {}, at position {}", player->getName(), itemsPurchased, itemId, npc->getName(), player->getPosition().toString());
 		} else if (backpacksPurchased > 0) {
 			ss << "Bought " << std::to_string(itemsPurchased) << "x " << it.name << " and " << std::to_string(backpacksPurchased);
 			if (backpacksPurchased > 1) {
-				ss << " shopping bags for " << std::to_string(itemCost + backpackCost) << " gold coin";
+				ss << " shopping bags for " << std::to_string(itemCost + backpackCost) << " copper coin";
 			} else {
-				ss << " shopping bag for " << std::to_string(itemCost + backpackCost) << " gold coin";
+				ss << " shopping bag for " << std::to_string(itemCost + backpackCost) << " copper coin";
 			}
 			if ((itemCost + backpackCost) > 1) {
 				ss << "s.";
@@ -643,7 +643,7 @@ int NpcFunctions::luaNpcSellItem(lua_State* L) {
 				ss << ".";
 			}
 		} else {
-			ss << "Bought " << std::to_string(itemsPurchased) << "x " << it.name << " for " << std::to_string(itemCost) << " gold coin";
+			ss << "Bought " << std::to_string(itemsPurchased) << "x " << it.name << " for " << std::to_string(itemCost) << " copper coin";
 			if (itemCost > 1) {
 				ss << "s.";
 			} else {
@@ -663,7 +663,7 @@ int NpcFunctions::luaNpcSellItem(lua_State* L) {
 			if (backpacksPurchased > 1) {
 				ss << "s";
 			}
-			ss << " for " << std::to_string(backpackCost) << " gold coin";
+			ss << " for " << std::to_string(backpackCost) << " copper coin";
 			if (backpackCost > 1) {
 				ss << "s.";
 			} else {

@@ -1436,10 +1436,10 @@ void Player::updatePartyTrackerAnalyzer() const {
 
 void Player::sendLootStats(const std::shared_ptr<Item> &item, uint8_t count) {
 	uint64_t value = 0;
-	if (item->getID() == ITEM_GOLD_COIN || item->getID() == ITEM_PLATINUM_COIN || item->getID() == ITEM_CRYSTAL_COIN) {
-		if (item->getID() == ITEM_PLATINUM_COIN) {
+	if (item->getID() == ITEM_COPPER_COIN || item->getID() == ITEM_SILVER_COIN || item->getID() == ITEM_GOLD_COIN) {
+		if (item->getID() == ITEM_SILVER_COIN) {
 			value = count * 100;
-		} else if (item->getID() == ITEM_CRYSTAL_COIN) {
+		} else if (item->getID() == ITEM_GOLD_COIN) {
 			value = count * 10000;
 		} else {
 			value = count;
@@ -2342,7 +2342,7 @@ void Player::onApplyImbuement(const Imbuement* imbuement, const std::shared_ptr<
 	price += protectionCharm ? baseImbuement->protectionPrice : 0;
 
 	if (!g_game().removeMoney(static_self_cast<Player>(), price, 0, true)) {
-		const std::string message = fmt::format("You don't have {} gold coins.", price);
+		const std::string message = fmt::format("You don't have {} copper coins.", price);
 
 		g_logger().error("[Player::onApplyImbuement] - An error occurred while player with name {} try to apply imbuement, player do not have money", this->getName());
 		sendImbuementResult(message);
@@ -2374,7 +2374,7 @@ void Player::onApplyImbuement(const Imbuement* imbuement, const std::shared_ptr<
 
 	if (!protectionCharm && uniform_random(1, 100) > baseImbuement->percent) {
 		openImbuementWindow(item);
-		sendImbuementResult("Oh no!\n\nThe imbuement has failed. You have lost the astral sources and gold you needed for the imbuement.\n\nNext time use a protection charm to better your chances.");
+		sendImbuementResult("Oh no!\n\nThe imbuement has failed. You have lost the astral sources and copper you needed for the imbuement.\n\nNext time use a protection charm to better your chances.");
 		openImbuementWindow(item);
 		return;
 	}
@@ -2406,7 +2406,7 @@ void Player::onClearImbuement(const std::shared_ptr<Item> &item, uint8_t slot) {
 	}
 
 	if (!g_game().removeMoney(static_self_cast<Player>(), baseImbuement->removeCost, 0, true)) {
-		const std::string message = fmt::format("You don't have {} gold coins.", baseImbuement->removeCost);
+		const std::string message = fmt::format("You don't have {} copper coins.", baseImbuement->removeCost);
 
 		g_logger().error("[Player::onClearImbuement] - An error occurred while player with name {} try to apply imbuement, player do not have money", this->getName());
 		this->sendImbuementResult(message);
@@ -9121,7 +9121,7 @@ void Player::forgeFuseItems(ForgeAction_t actionType, uint16_t firstItemId, uint
 			break;
 		}
 		if (!g_game().removeMoney(static_self_cast<Player>(), cost, 0, true)) {
-			g_logger().error("[{}] Failed to remove {} gold from player with name {}", __FUNCTION__, cost, getName());
+			g_logger().error("[{}] Failed to remove {} copper from player with name {}", __FUNCTION__, cost, getName());
 			sendForgeError(RETURNVALUE_CONTACTADMINISTRATOR);
 			return;
 		}
@@ -9175,7 +9175,7 @@ void Player::forgeFuseItems(ForgeAction_t actionType, uint16_t firstItemId, uint
 					break;
 				}
 				if (!g_game().removeMoney(static_self_cast<Player>(), cost, 0, true)) {
-					g_logger().error("[{}] Failed to remove {} gold from player with name {}", __FUNCTION__, cost, getName());
+					g_logger().error("[{}] Failed to remove {} copper from player with name {}", __FUNCTION__, cost, getName());
 					sendForgeError(RETURNVALUE_CONTACTADMINISTRATOR);
 					return;
 				}
@@ -9248,7 +9248,7 @@ void Player::forgeFuseItems(ForgeAction_t actionType, uint16_t firstItemId, uint
 				break;
 			}
 			if (!g_game().removeMoney(static_self_cast<Player>(), cost, 0, true)) {
-				g_logger().error("[{}] Failed to remove {} gold from player with name {}", __FUNCTION__, cost, getName());
+				g_logger().error("[{}] Failed to remove {} copper from player with name {}", __FUNCTION__, cost, getName());
 				sendForgeError(RETURNVALUE_CONTACTADMINISTRATOR);
 				return;
 			}
@@ -9383,7 +9383,7 @@ void Player::forgeTransferItemTier(ForgeAction_t actionType, uint16_t donorItemI
 	}
 
 	if (!g_game().removeMoney(static_self_cast<Player>(), cost, 0, true)) {
-		g_logger().error("[{}] Failed to remove {} gold from player with name {}", __FUNCTION__, cost, getName());
+		g_logger().error("[{}] Failed to remove {} copper from player with name {}", __FUNCTION__, cost, getName());
 		sendForgeError(RETURNVALUE_CONTACTADMINISTRATOR);
 		return;
 	}
@@ -9614,7 +9614,7 @@ void Player::registerForgeHistoryDescription(ForgeHistory history) {
 				"{:d} dust"
 				"</li>"
 				"<li>"
-				"{:s} gold"
+				"{:s} copper"
 				"</li>"
 				"</ul>",
 				successfulString,
@@ -9656,7 +9656,7 @@ void Player::registerForgeHistoryDescription(ForgeHistory history) {
 				"100 dust"
 				"</li>"
 				"<li>"
-				"{:s} gold"
+				"{:s} copper"
 				"</li>"
 				"</ul>",
 				successfulString,
@@ -9699,7 +9699,7 @@ void Player::registerForgeHistoryDescription(ForgeHistory history) {
 			"100 dust"
 			"</li>"
 			"<li>"
-			"{:s} gold"
+			"{:s} copper"
 			"</li>"
 			"</ul>",
 			successfulString,

@@ -117,7 +117,7 @@ end
 
 -- On sell npc shop message
 npcType.onSellItem = function(npc, player, itemId, subtype, amount, ignore, name, totalCost)
-	player:sendTextMessage(MESSAGE_TRADE, string.format("Sold %ix %s for %i gold.", amount, name, totalCost))
+	player:sendTextMessage(MESSAGE_TRADE, string.format("Sold %ix %s for %i copper.", amount, name, totalCost))
 end
 
 -- On check npc shop message (look item)
@@ -127,7 +127,7 @@ npcType.onCheckItem = function(npc, player, clientId, subType) end
 local node1 = keywordHandler:addKeyword({ "promot" }, StdModule.say, {
 	npcHandler = npcHandler,
 	onlyFocus = true,
-	text = "I can promote you for 20000 gold coins. Do you want me to promote you?",
+	text = "I can promote you for 20000 copper coins. Do you want me to promote you?",
 })
 node1:addChildKeyword({ "yes" }, StdModule.promotePlayer, {
 	npcHandler = npcHandler,

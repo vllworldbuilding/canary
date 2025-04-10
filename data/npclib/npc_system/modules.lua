@@ -46,7 +46,7 @@ if Modules == nil then
 			return false
 		end
 
-		local cost, costMessage = (IsTravelFree() and 0) or parameters.cost, "%d gold"
+		local cost, costMessage = (IsTravelFree() and 0) or parameters.cost, "%d copper"
 		if cost and cost > 0 then
 			if parameters.discount then
 				cost = cost - StdModule.travelDiscount(npc, player, parameters.discount)
@@ -136,7 +136,7 @@ if Modules == nil then
 			elseif not player:canLearnSpell(parameters.spellName) then
 				npcHandler:say("You cannot learn this spell.", npc, player)
 			elseif not player:removeMoneyBank(parameters.price) then
-				npcHandler:say(string.format("You do not have enough money, this spell costs %s gold.", parameters.price), npc, player)
+				npcHandler:say(string.format("You do not have enough money, this spell costs %s copper.", parameters.price), npc, player)
 			else
 				npcHandler:say(string.format("You have learned '%s'.", parameters.spellName), npc, player)
 				player:learnSpell(parameters.spellName)
@@ -520,7 +520,7 @@ if Modules == nil then
 
 		local cost = (IsTravelFree() and 0) or parameters.cost
 
-		module.npcHandler:say(string.format("Do you want to travel to '%s' for '%d' gold coins?", keywords[1], cost), npc, player)
+		module.npcHandler:say(string.format("Do you want to travel to '%s' for '%d' copper coins?", keywords[1], cost), npc, player)
 		return true
 	end
 

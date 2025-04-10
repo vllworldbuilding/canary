@@ -258,9 +258,9 @@ Game::Game() {
 	};
 
 	m_titles = {
-		Title(1, GOLD, "Gold Hoarder", "Earned at least 1,000,000 gold.", 1000000, false),
-		Title(2, GOLD, "Platinum Hoarder", "Earned at least 10,000,000 gold.", 10000000, false),
-		Title(3, GOLD, "Crystal Hoarder", "Earned at least 100,000,000 gold.", 100000000, false),
+		Title(1, COPPER, "Copper Hoarder", "Earned at least 1,000,000 copper.", 1000000, false),
+		Title(2, COPPER, "Silver Hoarder", "Earned at least 10,000,000 copper.", 10000000, false),
+		Title(3, COPPER, "Gold Hoarder", "Earned at least 100,000,000 copper.", 100000000, false),
 
 		Title(4, MOUNTS, "Beaststrider (Grade 1)", "Unlocked 10 or more Mounts.", 10, true),
 		Title(5, MOUNTS, "Beaststrider (Grade 2)", "Unlocked 20 or more Mounts.", 20, true),
@@ -1931,7 +1931,7 @@ ReturnValue Game::checkMoveItemToCylinder(const std::shared_ptr<Player> &player,
 
 			bool allowAnything = g_configManager().getBoolean(TOGGLE_GOLD_POUCH_ALLOW_ANYTHING);
 
-			if (!allowAnything && item->getID() != ITEM_GOLD_COIN && item->getID() != ITEM_PLATINUM_COIN && item->getID() != ITEM_CRYSTAL_COIN) {
+			if (!allowAnything && item->getID() != ITEM_COPPER_COIN && item->getID() != ITEM_SILVER_COIN && item->getID() != ITEM_GOLD_COIN) {
 				return RETURNVALUE_ITEMCANNOTBEMOVEDPOUCH;
 			}
 
@@ -2741,16 +2741,16 @@ void Game::addMoney(const std::shared_ptr<Cylinder> &cylinder, uint64_t money, u
 		}
 	};
 
-	uint32_t crystalCoins = money / 10000;
-	money -= crystalCoins * 10000;
-	addCoins(ITEM_CRYSTAL_COIN, crystalCoins);
+	uint32_t goldCoins = money / 10000;
+	money -= goldCoins * 10000;
+	addCoins(ITEM_GOLD_COIN, goldCoins);
 
-	uint16_t platinumCoins = money / 100;
-	money -= platinumCoins * 100;
-	addCoins(ITEM_PLATINUM_COIN, platinumCoins);
+	uint16_t silverCoins = money / 100;
+	money -= silverCoins * 100;
+	addCoins(ITEM_SILVER_COIN, silverCoins);
 
 	if (money > 0) {
-		addCoins(ITEM_GOLD_COIN, money);
+		addCoins(ITEM_COPPER_COIN, money);
 	}
 }
 
@@ -2933,7 +2933,7 @@ void Game::playerQuickLootCorpse(const std::shared_ptr<Player> &player, const st
 	std::vector<std::shared_ptr<Item>> itemList;
 	bool ignoreListItems = (player->quickLootFilter == QUICKLOOTFILTER_SKIPPEDLOOT);
 
-	bool missedAnyGold = false;
+	bool missedAnyCopper = false;
 	bool missedAnyItem = false;
 
 	for (ContainerIterator it = corpse->iterator(); it.hasNext(); it.advance()) {
@@ -2941,7 +2941,7 @@ void Game::playerQuickLootCorpse(const std::shared_ptr<Player> &player, const st
 		bool listed = player->isQuickLootListedItem(item);
 		if ((listed && ignoreListItems) || (!listed && !ignoreListItems)) {
 			if (item->getWorth() != 0) {
-				missedAnyGold = true;
+				missedAnyCopper = true;
 			} else {
 				missedAnyItem = true;
 			}
@@ -2954,7 +2954,7 @@ void Game::playerQuickLootCorpse(const std::shared_ptr<Player> &player, const st
 	bool shouldNotifyCapacity = false;
 	ObjectCategory_t shouldNotifyNotEnoughRoom = OBJECTCATEGORY_NONE;
 
-	uint32_t totalLootedGold = 0;
+	uint32_t totalLootedCopper = 0;
 	uint32_t totalLootedItems = 0;
 	for (const std::shared_ptr<Item> &item : itemList) {
 		uint32_t worth = item->getWorth();
@@ -2970,13 +2970,13 @@ void Game::playerQuickLootCorpse(const std::shared_ptr<Player> &player, const st
 
 		bool success = ret == RETURNVALUE_NOERROR;
 		if (worth != 0) {
-			missedAnyGold = missedAnyGold || !success;
+			missedAnyCopper = missedAnyCopper || !success;
 			if (success) {
 				player->sendLootStats(item, baseCount);
-				totalLootedGold += worth;
+				totalLootedCopper += worth;
 			} else {
 				// item is not completely moved
-				totalLootedGold += worth - item->getWorth();
+				totalLootedCopper += worth - item->getWorth();
 			}
 		} else {
 			missedAnyItem = missedAnyItem || !success;
@@ -2988,12 +2988,12 @@ void Game::playerQuickLootCorpse(const std::shared_ptr<Player> &player, const st
 	}
 
 	std::stringstream ss;
-	if (totalLootedGold != 0 || missedAnyGold || totalLootedItems != 0 || missedAnyItem) {
-		bool lootedAllGold = totalLootedGold != 0 && !missedAnyGold;
+	if (totalLootedCopper != 0 || missedAnyCopper || totalLootedItems != 0 || missedAnyItem) {
+		bool lootedAllCopper = totalLootedCopper != 0 && !missedAnyCopper;
 		bool lootedAllItems = totalLootedItems != 0 && !missedAnyItem;
-		if (lootedAllGold) {
+		if (lootedAllCopper) {
 			if (totalLootedItems != 0 || missedAnyItem) {
-				ss << "You looted the complete " << totalLootedGold << " gold";
+				ss << "You looted the complete " << totalLootedCopper << " copper";
 
 				if (lootedAllItems) {
 					ss << " and all dropped items";
@@ -3003,24 +3003,24 @@ void Game::playerQuickLootCorpse(const std::shared_ptr<Player> &player, const st
 					ss << " but none of the dropped items";
 				}
 			} else {
-				ss << "You looted " << totalLootedGold << " gold";
+				ss << "You looted " << totalLootedCopper << " copper";
 			}
 		} else if (lootedAllItems) {
 			if (totalLootedItems == 1) {
 				ss << "You looted 1 item";
-			} else if (totalLootedGold != 0 || missedAnyGold) {
+			} else if (totalLootedCopper != 0 || missedAnyCopper) {
 				ss << "You looted all of the dropped items";
 			} else {
 				ss << "You looted all items";
 			}
 
-			if (totalLootedGold != 0) {
-				ss << ", but you only looted " << totalLootedGold << " of the dropped gold";
-			} else if (missedAnyGold) {
-				ss << " but none of the dropped gold";
+			if (totalLootedCopper != 0) {
+				ss << ", but you only looted " << totalLootedCopper << " of the dropped copper";
+			} else if (missedAnyCopper) {
+				ss << " but none of the dropped copper";
 			}
-		} else if (totalLootedGold != 0) {
-			ss << "You only looted " << totalLootedGold << " of the dropped gold";
+		} else if (totalLootedCopper != 0) {
+			ss << "You only looted " << totalLootedCopper << " of the dropped copper";
 			if (totalLootedItems != 0) {
 				ss << " and some of the dropped items";
 			} else if (missedAnyItem) {
@@ -3028,11 +3028,11 @@ void Game::playerQuickLootCorpse(const std::shared_ptr<Player> &player, const st
 			}
 		} else if (totalLootedItems != 0) {
 			ss << "You looted some of the dropped items";
-			if (missedAnyGold) {
-				ss << " but none of the dropped gold";
+			if (missedAnyCopper) {
+				ss << " but none of the dropped copper";
 			}
-		} else if (missedAnyGold) {
-			ss << "You looted none of the dropped gold";
+		} else if (missedAnyCopper) {
+			ss << "You looted none of the dropped copper";
 			if (missedAnyItem) {
 				ss << " and none of the items";
 			}
@@ -3164,11 +3164,11 @@ ReturnValue Game::internalCollectManagedItems(const std::shared_ptr<Player> &pla
 
 	// Send money to the bank
 	if (g_configManager().getBoolean(AUTOBANK)) {
-		if (item->getID() == ITEM_GOLD_COIN || item->getID() == ITEM_PLATINUM_COIN || item->getID() == ITEM_CRYSTAL_COIN) {
+		if (item->getID() == ITEM_COPPER_COIN || item->getID() == ITEM_SILVER_COIN || item->getID() == ITEM_GOLD_COIN) {
 			uint64_t money = 0;
-			if (item->getID() == ITEM_PLATINUM_COIN) {
+			if (item->getID() == ITEM_SILVER_COIN) {
 				money = item->getItemCount() * 100;
-			} else if (item->getID() == ITEM_CRYSTAL_COIN) {
+			} else if (item->getID() == ITEM_GOLD_COIN) {
 				money = item->getItemCount() * 10000;
 			} else {
 				money = item->getItemCount();
@@ -3251,7 +3251,7 @@ ObjectCategory_t Game::getObjectCategory(const std::shared_ptr<Item> &item) {
 
 	const ItemType &it = Item::items[item->getID()];
 	if (item->getWorth() != 0) {
-		category = OBJECTCATEGORY_GOLD;
+		category = OBJECTCATEGORY_COPPER;
 	} else {
 		category = getObjectCategory(it);
 	}
@@ -3324,11 +3324,11 @@ ObjectCategory_t Game::getObjectCategory(const ItemType &it) {
 uint64_t Game::getItemMarketPrice(const std::map<uint16_t, uint64_t> &itemMap, bool buyPrice) const {
 	uint64_t total = 0;
 	for (const auto &it : itemMap) {
-		if (it.first == ITEM_GOLD_COIN) {
+		if (it.first == ITEM_COPPER_COIN) {
 			total += it.second;
-		} else if (it.first == ITEM_PLATINUM_COIN) {
+		} else if (it.first == ITEM_SILVER_COIN) {
 			total += 100 * it.second;
-		} else if (it.first == ITEM_CRYSTAL_COIN) {
+		} else if (it.first == ITEM_GOLD_COIN) {
 			total += 10000 * it.second;
 		} else {
 			auto marketIt = itemsPriceMap.find(it.first);
@@ -5663,7 +5663,7 @@ void Game::playerQuickLoot(uint32_t playerId, const Position &pos, uint16_t item
 			}
 
 			if (worth != 0) {
-				ss << worth << " gold.";
+				ss << worth << " copper.";
 			} else {
 				ss << "1 item.";
 			}
@@ -5759,7 +5759,7 @@ void Game::playerSetManagedContainer(uint32_t playerId, ObjectCategory_t categor
 
 	const std::shared_ptr<Container> &container = thing->getContainer();
 	auto allowConfig = g_configManager().getBoolean(TOGGLE_GOLD_POUCH_ALLOW_ANYTHING) || g_configManager().getBoolean(TOGGLE_GOLD_POUCH_QUICKLOOT_ONLY);
-	if (!container || ((container->getID() == ITEM_GOLD_POUCH && category != OBJECTCATEGORY_GOLD) && !allowConfig)) {
+	if (!container || ((container->getID() == ITEM_GOLD_POUCH && category != OBJECTCATEGORY_COPPER) && !allowConfig)) {
 		player->sendCancelMessage(RETURNVALUE_NOTPOSSIBLE);
 		return;
 	}

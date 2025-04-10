@@ -37,7 +37,7 @@ function deposit.onSay(player, words, param)
 		return true
 	end
 
-	player:sendTextMessage(config.messageStyle, "You have deposited " .. FormatNumber(amount) .. " gold coins.")
+	player:sendTextMessage(config.messageStyle, "You have deposited " .. FormatNumber(amount) .. " copper coins.")
 	return true
 end
 
@@ -59,7 +59,7 @@ function withdraw.onSay(player, words, param)
 		return true
 	end
 
-	player:sendTextMessage(config.messageStyle, "You have withdrawn " .. FormatNumber(amount) .. " gold coins.")
+	player:sendTextMessage(config.messageStyle, "You have withdrawn " .. FormatNumber(amount) .. " copper coins.")
 	return true
 end
 
@@ -95,7 +95,7 @@ function transfer.onSay(player, words, param)
 		return true
 	end
 
-	player:sendTextMessage(config.messageStyle, "You have transferred " .. FormatNumber(amount) .. " gold coins to " .. name .. ".")
+	player:sendTextMessage(config.messageStyle, "You have transferred " .. FormatNumber(amount) .. " copper coins to " .. name .. ".")
 	return true
 end
 

@@ -82,7 +82,7 @@ public:
 	const std::shared_ptr<KV> &getUnlockedKV();
 
 	// Title Calculate Functions
-	bool checkGold(uint32_t amount) const;
+	bool checkCopper(uint32_t amount) const;
 	bool checkMount(uint32_t amount) const;
 	bool checkOutfit(uint32_t amount) const;
 	bool checkLevel(uint32_t amount) const;

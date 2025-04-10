@@ -4,12 +4,12 @@ local prize = {
 	{ chance = 3, id = 11588, amount = 1 },
 	{ chance = 4, id = 3549, amount = 1 },
 	{ chance = 5, id = 3420, amount = 1 },
-	{ chance = 10, id = ITEM_CRYSTAL_COIN, amount = 17 },
-	{ chance = 20, id = ITEM_GOLD_COIN, amount = 1 },
-	{ chance = 30, id = ITEM_CRYSTAL_COIN, amount = 1 },
-	{ chance = 40, id = ITEM_GOLD_COIN, amount = 50 },
-	{ chance = 50, id = ITEM_PLATINUM_COIN, amount = 15 },
-	{ chance = 90, id = ITEM_GOLD_COIN, amount = 80 },
+	{ chance = 10, id = ITEM_GOLD_COIN, amount = 17 },
+	{ chance = 20, id = ITEM_COPPER_COIN, amount = 1 },
+	{ chance = 30, id = ITEM_GOLD_COIN, amount = 1 },
+	{ chance = 40, id = ITEM_COPPER_COIN, amount = 50 },
+	{ chance = 50, id = ITEM_SILVER_COIN, amount = 15 },
+	{ chance = 90, id = ITEM_COPPER_COIN, amount = 80 },
 }
 
 local surpriseBox = Action()

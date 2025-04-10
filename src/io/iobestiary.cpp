@@ -344,7 +344,7 @@ void IOBestiary::sendBuyCharmRune(const std::shared_ptr<Player> &player, charmRu
 			g_metrics().addCounter("balance_decrease", fee, { { "player", player->getName() }, { "context", "charm_removal" } });
 			return;
 		}
-		player->sendFYIBox("You don't have enough gold.");
+		player->sendFYIBox("You don't have enough copper.");
 	}
 	player->BestiarysendCharms();
 }
