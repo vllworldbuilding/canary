@@ -63,9 +63,9 @@ local function greetCallback(npc, creature)
 	local player = Player(creature)
 	-- Mission 8: The Rookie Guard Quest -- World Bank Quest KV Store
 	--if player:getStorageValue(Storage.Quest.U9_1.TheRookieGuard.Mission08) == 1 then
-		npcHandler:setMessage(MESSAGE_GREET, "Welcome |PLAYERNAME|! Special newcomer offer, today only! Deposit some money - or {deposit ALL} of your money! - and get 50 gold for free!")
+	npcHandler:setMessage(MESSAGE_GREET, "Welcome |PLAYERNAME|! Special newcomer offer, today only! Deposit some money - or {deposit ALL} of your money! - and get 50 gold for free!")
 	--else
-		--npcHandler:setMessage(MESSAGE_GREET, "Yes? What may I do for you, |PLAYERNAME|? Bank business, perhaps?")
+	--npcHandler:setMessage(MESSAGE_GREET, "Yes? What may I do for you, |PLAYERNAME|? Bank business, perhaps?")
 	--end
 	return true
 end
