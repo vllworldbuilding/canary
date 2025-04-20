@@ -1,5 +1,5 @@
 local communicates = {
-	"Welcome to The Middlegard Online Shard!"
+	"Welcome to The Middlegard Online Shard!",
 }
 
 local scriptConfig = {
