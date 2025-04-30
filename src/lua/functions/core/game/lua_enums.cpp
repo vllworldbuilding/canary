@@ -328,6 +328,9 @@ void LuaEnums::initFactionEnums(lua_State* L) {
 	registerEnum(L, FACTION_DEATHLING);
 	registerEnum(L, FACTION_ANUMA);
 	registerEnum(L, FACTION_FAFNAR);
+	registerEnum(L, FACTION_RAT);
+	registerEnum(L, FACTION_CAT);
+	registerEnum(L, FACTION_DOG);
 	registerEnum(L, FACTION_LAST);
 }
 

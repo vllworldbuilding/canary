@@ -52,6 +52,7 @@ private:
 
 	static int luaMonsterTypeFaction(lua_State* L);
 	static int luaMonsterTypeEnemyFactions(lua_State* L);
+	static int luaMonsterTypeRunFactions(lua_State* L);
 	static int luaMonsterTypeTargetPreferPlayer(lua_State* L);
 	static int luaMonsterTypeTargetPreferMaster(lua_State* L);
 

@@ -130,6 +130,7 @@ class MonsterType {
 
 		Faction_t faction = FACTION_DEFAULT;
 		stdext::vector_set<Faction_t> enemyFactions;
+		stdext::vector_set<Faction_t> runFactions;
 
 		bool canPushItems = false;
 		bool canPushCreatures = false;

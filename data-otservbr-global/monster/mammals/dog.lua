@@ -35,6 +35,10 @@ monster.corpse = 5971
 monster.speed = 62
 monster.manaCost = 220
 
+monster.faction = FACTION_DOG
+monster.enemyFaction = { FACTION_RAT, FACTION_CAT }
+monster.runFaction = {}
+
 monster.changeTarget = {
 	interval = 4000,
 	chance = 0,

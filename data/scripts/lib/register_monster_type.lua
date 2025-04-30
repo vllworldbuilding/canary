@@ -217,6 +217,11 @@ registerMonsterType.flags = function(mtype, mask)
 		if mask.flags.targetDistance then
 			mtype:targetDistance(math.max(1, mask.flags.targetDistance))
 		end
+		if mask.runFactions then
+			for _, faction in pairs(mask.runFactions) do
+				mtype:runFactions(faction)
+			end
+		end
 		if mask.flags.runHealth then
 			mtype:runHealth(mask.flags.runHealth)
 		end

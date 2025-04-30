@@ -68,6 +68,8 @@ public:
 	Faction_t getFaction() const override;
 
 	bool isEnemyFaction(Faction_t faction) const;
+	bool isRunFaction(Faction_t faction) const;
+	bool isFleeingFromFaction() const;
 
 	bool isPushable() override;
 	bool isAttackable() const override;

@@ -58,6 +58,7 @@ void MonsterTypeFunctions::init(lua_State* L) {
 
 	Lua::registerMethod(L, "MonsterType", "faction", MonsterTypeFunctions::luaMonsterTypeFaction);
 	Lua::registerMethod(L, "MonsterType", "enemyFactions", MonsterTypeFunctions::luaMonsterTypeEnemyFactions);
+	Lua::registerMethod(L, "MonsterType", "runFactions", MonsterTypeFunctions::luaMonsterTypeRunFactions);
 	Lua::registerMethod(L, "MonsterType", "targetPreferPlayer", MonsterTypeFunctions::luaMonsterTypeTargetPreferPlayer);
 	Lua::registerMethod(L, "MonsterType", "targetPreferMaster", MonsterTypeFunctions::luaMonsterTypeTargetPreferMaster);
 
@@ -1902,6 +1903,27 @@ int MonsterTypeFunctions::luaMonsterTypeGetMonstersByBestiaryStars(lua_State* L)
 		Lua::pushUserdata<MonsterType>(L, monsterType);
 		Lua::setMetatable(L, -1, "MonsterType");
 		lua_rawseti(L, -2, ++index);
+	}
+	return 1;
+}
+
+int MonsterTypeFunctions::luaMonsterTypeRunFactions(lua_State* L) {
+	const auto &monsterType = Lua::getUserdataShared<MonsterType>(L, 1, "MonsterType");
+	if (monsterType) {
+		if (lua_gettop(L) == 1) {
+			lua_createtable(L, monsterType->info.runFactions.size(), 0);
+			int index = 0;
+			for (const auto &faction : monsterType->info.runFactions) {
+				lua_pushnumber(L, faction);
+				lua_rawseti(L, -2, ++index);
+			}
+		} else {
+			const Faction_t faction = Lua::getNumber<Faction_t>(L, 2);
+			monsterType->info.runFactions.insert(faction);
+			Lua::pushBoolean(L, true);
+		}
+	} else {
+		lua_pushnil(L);
 	}
 	return 1;
 }
