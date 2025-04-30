@@ -240,7 +240,6 @@ bool Monster::isFleeingFromFaction() const {
 	return false;
 }
 
-
 bool Monster::isPushable() {
 	return mType->info.pushable && baseSpeed != 0;
 }
@@ -779,7 +778,6 @@ bool Monster::searchTarget(TargetSearchType_t searchType /*= TARGETSEARCH_DEFAUL
 		// Não busca alvo se está fugindo
 		return false;
 	}
-
 
 	for (const auto &cref : targetList) {
 		const auto &creature = cref.lock();
