@@ -219,27 +219,6 @@ bool Monster::isEnemyFaction(Faction_t faction) const {
 	return mType->info.enemyFactions.empty() ? false : mType->info.enemyFactions.contains(faction);
 }
 
-bool Monster::isRunFaction(Faction_t faction) const {
-	const auto &master = getMaster();
-	if (master && master->getMonster()) {
-		return master->getMonster()->isRunFaction(faction);
-	}
-	return !mType->info.runFactions.empty() && mType->info.runFactions.contains(faction);
-}
-
-bool Monster::isFleeingFromFaction() const {
-	if (isSummon()) {
-		return false;
-	}
-	for (const auto &cref : targetList) {
-		const auto &creature = cref.lock();
-		if (creature && isRunFaction(creature->getFaction())) {
-			return true;
-		}
-	}
-	return false;
-}
-
 bool Monster::isPushable() {
 	return mType->info.pushable && baseSpeed != 0;
 }
@@ -774,11 +753,6 @@ bool Monster::searchTarget(TargetSearchType_t searchType /*= TARGETSEARCH_DEFAUL
 	std::vector<std::shared_ptr<Creature>> resultList;
 	const Position &myPos = getPosition();
 
-	if (isFleeingFromFaction()) {
-		// Não busca alvo se está fugindo
-		return false;
-	}
-
 	for (const auto &cref : targetList) {
 		const auto &creature = cref.lock();
 		if (creature && isTarget(creature)) {
@@ -960,14 +934,7 @@ bool Monster::isTarget(const std::shared_ptr<Creature> &creature) {
 
 	if (!isSummon()) {
 		if (getFaction() != FACTION_DEFAULT) {
-			const Faction_t targetFaction = creature->getFaction();
-
-			if (isRunFaction(targetFaction)) {
-				// Fugir tem prioridade: não considerar como alvo
-				return false;
-			}
-
-			return isEnemyFaction(targetFaction);
+			return isEnemyFaction(creature->getFaction());
 		}
 	}
 
@@ -975,7 +942,27 @@ bool Monster::isTarget(const std::shared_ptr<Creature> &creature) {
 }
 
 bool Monster::isFleeing() const {
-	return !isSummon() && (getHealth() <= runAwayHealth || isFleeingFromFaction()) && challengeFocusDuration <= 0 && challengeMeleeDuration <= 0;
+	if (isSummon()) {
+		return false;
+	}
+
+	// Foge se a vida estiver baixa
+	if (getHealth() <= runAwayHealth && challengeFocusDuration <= 0 && challengeMeleeDuration <= 0) {
+		return true;
+	}
+
+	// Foge se houver criatura de runFactions no targetList
+	if (!mType->info.runFactions.empty()) {
+		for (const auto &weakTarget : targetList) {
+			if (auto target = weakTarget.lock()) {
+				if (target.get() != this && mType->info.runFactions.contains(target->getFaction())) {
+					return true;
+				}
+			}
+		}
+	}
+
+	return false;
 }
 
 bool Monster::selectTarget(const std::shared_ptr<Creature> &creature) {

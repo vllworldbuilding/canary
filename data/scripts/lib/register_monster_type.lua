@@ -153,6 +153,17 @@ registerMonsterType.targetPreferMaster = function(mtype, mask)
 		mtype:targetPreferMaster(mask.targetPreferMaster)
 	end
 end
+registerMonsterType.runFactions = function(mtype, mask)
+	if mask.runFactions then
+		for _, runFaction in pairs(mask.runFactions) do
+			if not runFaction then
+				print('[Error - Loading monsters] Monster: "' .. mtype:name() .. '". Unknown run faction.')
+			else
+				mtype:runFactions(runFaction)
+			end
+		end
+	end
+end
 registerMonsterType.enemyFactions = function(mtype, mask)
 	if mask.enemyFactions then
 		for _, enemyFaction in pairs(mask.enemyFactions) do
@@ -216,11 +227,6 @@ registerMonsterType.flags = function(mtype, mask)
 		end
 		if mask.flags.targetDistance then
 			mtype:targetDistance(math.max(1, mask.flags.targetDistance))
-		end
-		if mask.runFactions then
-			for _, faction in pairs(mask.runFactions) do
-				mtype:runFactions(faction)
-			end
 		end
 		if mask.flags.runHealth then
 			mtype:runHealth(mask.flags.runHealth)
