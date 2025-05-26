@@ -1,10 +1,11 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Mustang")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.name = "Mustang"
+monster.description = "a black mustang"
+monster.experience = 0
 monster.outfit = {
-	lookType = 122,
+	lookType = 429,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,29 +14,29 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.raceId = 2581
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
+	toKill = 5,
+	FirstUnlock = 2,
+	SecondUnlock = 3,
+	CharmsPoints = 10,
 	Stars = 1,
-	Occurrence = 0,
+	Occurrence = 3,
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 170
+monster.maxHealth = 170
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 0
+monster.speed = 555
+monster.manaCost = 0
 
 monster.changeTarget = {
 	interval = 4000,
-	chance = 0,
+	chance = 20,
 }
 
 monster.strategiesTarget = {
@@ -43,23 +44,24 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
-	attackable = true,
+	summonable = false,
+	attackable = false,
 	hostile = false,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 140,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	isPreyExclusive = true,
 }
 
 monster.light = {
@@ -70,22 +72,22 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
+	{ text = "Weeeeheeeeeee", yell = false },
+	{ text = "*snort*", yell = false },
+	{ text = "*Weeeeheeeeaaa*", yell = false },
 }
 
 monster.loot = {}
 
-monster.attacks = {}
-
 monster.defenses = {
 	defense = 5,
-	armor = 5,
+	armor = 10,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

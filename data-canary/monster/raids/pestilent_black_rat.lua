@@ -1,10 +1,11 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Pestilent Black Rat")
 local monster = {}
 
-monster.description = "a bat"
+monster.name = "Black Rat"
+monster.description = "a black rat"
 monster.experience = 5
 monster.outfit = {
-	lookType = 122,
+	lookType = 21,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,7 +14,9 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.events = {}
+
+monster.raceId = 21
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
@@ -26,16 +29,16 @@ monster.Bestiary = {
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 30
+monster.maxHealth = 30
 monster.race = "blood"
-monster.corpse = 4363
+monster.corpse = 5964
 monster.speed = 200
-monster.manaCost = 250
+monster.manaCost = 200
 
 monster.changeTarget = {
 	interval = 4000,
-	chance = 0,
+	chance = 40,
 }
 
 monster.strategiesTarget = {
@@ -45,8 +48,8 @@ monster.strategiesTarget = {
 monster.flags = {
 	summonable = true,
 	attackable = true,
-	hostile = false,
-	convinceable = true,
+	hostile = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -54,7 +57,7 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 1,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,29 +73,33 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
+	{ text = "Meep!", yell = false },
 }
 
 monster.loot = {}
 
-monster.attacks = {}
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -8 },
+	{ name = "condition", type = CONDITION_CURSED, interval = 2000, chance = 15, minDamage = -200, maxDamage = -300, range = 1, shootEffect = false, effect = CONST_ME_MORTAREA, target = false },
+}
 
 monster.defenses = {
 	defense = 5,
-	armor = 5,
+	armor = 1,
+	mitigation = 0.07,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 20 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
-	{ type = COMBAT_ICEDAMAGE, percent = 0 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
-	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = -10 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 20 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -10 },
 }
 
 monster.immunities = {

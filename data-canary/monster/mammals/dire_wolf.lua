@@ -1,10 +1,11 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Dire Wolf")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.name = "Dire Wolf"
+monster.description = "a grey dire wolf"
+monster.experience = 27
 monster.outfit = {
-	lookType = 122,
+	lookType = 3,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,25 +14,25 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.raceId = 3
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
 	Occurrence = 0,
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 280
+monster.maxHealth = 280
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 4150
+monster.speed = 264
+monster.manaCost = 420
 
 monster.changeTarget = {
 	interval = 4000,
@@ -43,18 +44,18 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
-	hostile = false,
+	hostile = true,
 	convinceable = true,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
-	staticAttackChance = 90,
+	staticAttackChance = 80,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,34 +71,42 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
+	{ text = "Yoooohhuuuu!", yell = false },
+	{ text = "Grrrrrrr", yell = false },
 }
 
-monster.loot = {}
+monster.loot = {
+	{ name = "ham", chance = 0, maxCount = 2 },
+	{ name = "wolf paw", chance = 0 },
+	{ name = "warwolf fur", chance = 0 },
+}
 
-monster.attacks = {}
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -50 },
+}
 
 monster.defenses = {
-	defense = 5,
-	armor = 5,
+	defense = 15,
+	armor = 8,
+	mitigation = 0.41,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 20 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
-	{ type = COMBAT_ICEDAMAGE, percent = 0 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
-	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = -10 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 10 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -10 },
 }
 
 monster.immunities = {
 	{ type = "paralyze", condition = false },
-	{ type = "outfit", condition = false },
+	{ type = "outfit", condition = true },
 	{ type = "invisible", condition = false },
 	{ type = "bleed", condition = false },
 }

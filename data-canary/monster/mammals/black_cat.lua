@@ -1,10 +1,11 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Black Cat")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.name = "Cat"
+monster.description = "a black cat"
+monster.experience = 0
 monster.outfit = {
-	lookType = 122,
+	lookType = 20007,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,29 +14,29 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.raceId = 2586
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 25,
+	FirstUnlock = 5,
+	SecondUnlock = 10,
+	CharmsPoints = 1,
+	Stars = 0,
 	Occurrence = 0,
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 20
+monster.maxHealth = 20
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 60066
+monster.speed = 124
+monster.manaCost = 220
 
 monster.changeTarget = {
-	interval = 4000,
-	chance = 0,
+	interval = 2000,
+	chance = 20,
 }
 
 monster.strategiesTarget = {
@@ -45,21 +46,22 @@ monster.strategiesTarget = {
 monster.flags = {
 	summonable = true,
 	attackable = true,
-	hostile = false,
+	hostile = true,
 	convinceable = true,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
 	canPushItems = false,
 	canPushCreatures = false,
-	staticAttackChance = 90,
+	staticAttackChance = 95,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 1,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	isPreyExclusive = true,
 }
 
 monster.light = {
@@ -70,22 +72,27 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
+	{ text = "Mew!", yell = false },
+	{ text = "Meow!", yell = false },
+	{ text = "Meow meow!", yell = false },
 }
 
 monster.loot = {}
 
-monster.attacks = {}
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = -2, maxDamage = -10 },
+}
 
 monster.defenses = {
 	defense = 5,
-	armor = 5,
+	armor = 1,
+	mitigation = 0.05,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

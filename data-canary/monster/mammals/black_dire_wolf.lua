@@ -1,10 +1,11 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Black Dire Wolf")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.name = "Dire Wolf"
+monster.description = "a black dire wolf"
+monster.experience = 35
 monster.outfit = {
-	lookType = 122,
+	lookType = 716,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,25 +14,25 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.raceId = 1139
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
+	Occurrence = 1,
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 400
+monster.maxHealth = 400
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 21984
+monster.speed = 250
+monster.manaCost = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -43,18 +44,18 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
-	hostile = false,
-	convinceable = true,
-	pushable = true,
+	hostile = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 8,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,29 +71,38 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
 }
 
-monster.loot = {}
+monster.loot = {
+	{ name = "ham", chance = 20120 },
+	{ id = 3012, chance = 2000 }, -- wolf tooth chain
+	{ name = "gold coin", chance = 65000, maxCount = 48 },
+	{ name = "meat", chance = 55000, maxCount = 2 },
+	{ name = "wolf paw", chance = 980 },
+	{ id = 22007, chance = 8000 }, --gloom wolf fur
+}
 
-monster.attacks = {}
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -92 },
+}
 
 monster.defenses = {
 	defense = 5,
-	armor = 5,
+	armor = 10,
+	mitigation = 0.51,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
-	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 20 },
+	{ type = COMBAT_FIREDAMAGE, percent = -5 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
-	{ type = COMBAT_ICEDAMAGE, percent = 0 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
-	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = -5 },
+	{ type = COMBAT_HOLYDAMAGE, percent = -5 },
+	{ type = COMBAT_DEATHDAMAGE, percent = 10 },
 }
 
 monster.immunities = {

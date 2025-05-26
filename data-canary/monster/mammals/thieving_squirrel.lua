@@ -1,10 +1,11 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Thieving Squirrel")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.name = "Squirrel"
+monster.description = "a thieving squirrel"
+monster.experience = 15
 monster.outfit = {
-	lookType = 122,
+	lookType = 274,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,25 +14,12 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "",
-}
-
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 55
+monster.maxHealth = 55
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 277
+monster.speed = 500
+monster.manaCost = 220
 
 monster.changeTarget = {
 	interval = 4000,
@@ -47,14 +35,14 @@ monster.flags = {
 	attackable = true,
 	hostile = false,
 	convinceable = true,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
-	staticAttackChance = 90,
+	staticAttackChance = 95,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 55,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,22 +58,27 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
+	{ text = "Chchch", yell = false },
 }
 
-monster.loot = {}
+monster.loot = {
+	{ id = 9843, chance = 100000 }, -- flask with beaver bait
+	{ id = 841, chance = 4550 }, -- peanut
+}
 
 monster.attacks = {}
 
 monster.defenses = {
 	defense = 5,
 	armor = 5,
+	mitigation = 0.10,
+	{ name = "invisible", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_BLUE },
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
@@ -96,9 +89,9 @@ monster.elements = {
 }
 
 monster.immunities = {
-	{ type = "paralyze", condition = false },
+	{ type = "paralyze", condition = true },
 	{ type = "outfit", condition = false },
-	{ type = "invisible", condition = false },
+	{ type = "invisible", condition = true },
 	{ type = "bleed", condition = false },
 }
 

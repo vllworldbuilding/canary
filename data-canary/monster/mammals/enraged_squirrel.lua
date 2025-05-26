@@ -1,10 +1,11 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Enraged Squirrel")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.name = "Squirrel"
+monster.description = "an enraged squirrel"
+monster.experience = 15
 monster.outfit = {
-	lookType = 122,
+	lookType = 274,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,25 +14,12 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "",
-}
-
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 35
+monster.maxHealth = 35
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 277
+monster.speed = 150
+monster.manaCost = 220
 
 monster.changeTarget = {
 	interval = 4000,
@@ -45,21 +33,21 @@ monster.strategiesTarget = {
 monster.flags = {
 	summonable = true,
 	attackable = true,
-	hostile = false,
+	hostile = true,
 	convinceable = true,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 2,
 	healthHidden = false,
 	isBlockable = false,
-	canWalkOnEnergy = false,
-	canWalkOnFire = false,
-	canWalkOnPoison = false,
+	canWalkOnEnergy = true,
+	canWalkOnFire = true,
+	canWalkOnPoison = true,
 }
 
 monster.light = {
@@ -70,22 +58,25 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
+	{ text = "Chchch", yell = false },
 }
 
 monster.loot = {}
 
-monster.attacks = {}
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, skill = 10, attack = 10 },
+}
 
 monster.defenses = {
 	defense = 5,
-	armor = 5,
+	armor = 1,
+	--	mitigation = ???,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

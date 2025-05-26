@@ -1,9 +1,9 @@
-local mType = Game.createMonsterType("Wolf")
+local mType = Game.createMonsterType("Starving Grey Wolf")
 local monster = {}
 
 monster.name = "Wolf"
-monster.description = "a grey wolf"
-monster.experience = 5
+monster.description = "a starving grey wolf"
+monster.experience = 65
 monster.outfit = {
 	lookType = 27,
 	lookHead = 0,
@@ -14,25 +14,12 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 27
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "",
-}
-
-monster.health = 50
-monster.maxHealth = 50
+monster.health = 85
+monster.maxHealth = 85
 monster.race = "blood"
 monster.corpse = 4007
-monster.speed = 164
-monster.manaCost = 255
+monster.speed = 140
+monster.manaCost = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,10 +31,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -58,9 +45,10 @@ monster.flags = {
 	runHealth = 8,
 	healthHidden = false,
 	isBlockable = false,
-	canWalkOnEnergy = false,
-	canWalkOnFire = false,
-	canWalkOnPoison = false,
+	canWalkOnEnergy = true,
+	canWalkOnFire = true,
+	canWalkOnPoison = true,
+	isPreyExclusive = true,
 }
 
 monster.light = {
@@ -71,38 +59,45 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
+	{ text = "Gaarrrrrr", yell = false },
+	{ text = "Gnoorrr", yell = false },
 	{ text = "Yoooohhuuuu!", yell = false },
-	{ text = "Grrrrrrr", yell = false },
 }
 
-monster.loot = {}
+monster.loot = {
+	{ name = "dirty fur", chance = 64730 },
+	{ name = "meat", chance = 5300, maxCount = 2 },
+	{ name = "wolf paw", chance = 1430 },
+}
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -20 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -25 },
 }
 
 monster.defenses = {
-	defense = 5,
-	armor = 5,
+	defense = 10,
+	armor = 2,
+	mitigation = 0.33,
+	{ name = "effect", interval = 2000, chance = 10, radius = 1, effect = CONST_ME_YELLOW_RINGS, target = false },
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 5 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
-	{ type = COMBAT_ICEDAMAGE, percent = -5 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 5 },
+	{ type = COMBAT_ICEDAMAGE, percent = -10 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 30 },
 	{ type = COMBAT_DEATHDAMAGE, percent = -5 },
 }
 
 monster.immunities = {
-	{ type = "paralyze", condition = false },
+	{ type = "paralyze", condition = true },
 	{ type = "outfit", condition = false },
-	{ type = "invisible", condition = false },
+	{ type = "invisible", condition = true },
 	{ type = "bleed", condition = false },
 }
 

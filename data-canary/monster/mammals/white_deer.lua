@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("White Deer")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.description = "a white deer"
+monster.experience = 0
 monster.outfit = {
-	lookType = 122,
+	lookType = 20039,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,7 +13,7 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.raceId = 31
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
@@ -26,16 +26,16 @@ monster.Bestiary = {
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 50
+monster.maxHealth = 50
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 60405
+monster.speed = 98
+monster.manaCost = 260
 
 monster.changeTarget = {
 	interval = 4000,
-	chance = 0,
+	chance = 20,
 }
 
 monster.strategiesTarget = {
@@ -54,12 +54,13 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 50,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	isPreyExclusive = true,
 }
 
 monster.light = {
@@ -70,22 +71,24 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
 }
 
 monster.loot = {}
 
-monster.attacks = {}
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -1 },
+}
 
 monster.defenses = {
 	defense = 5,
-	armor = 5,
+	armor = 2,
+	mitigation = 0.05,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

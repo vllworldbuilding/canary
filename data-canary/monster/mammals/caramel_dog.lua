@@ -1,10 +1,11 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Caramel Dog")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.name = "Dog"
+monster.description = "a caramel dog"
+monster.experience = 0
 monster.outfit = {
-	lookType = 122,
+	lookType = 20011,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,25 +14,25 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.raceId = 2589
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 25,
+	FirstUnlock = 5,
+	SecondUnlock = 10,
+	CharmsPoints = 1,
+	Stars = 0,
 	Occurrence = 0,
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 25
+monster.maxHealth = 25
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 60069
+monster.speed = 134
+monster.manaCost = 220
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,12 +55,13 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 13,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	isPreyExclusive = true,
 }
 
 monster.light = {
@@ -70,12 +72,10 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
+	{ text = "Wuff wuff", yell = false },
 }
 
 monster.loot = {}
-
-monster.attacks = {}
 
 monster.defenses = {
 	defense = 5,
@@ -85,7 +85,7 @@ monster.defenses = {
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

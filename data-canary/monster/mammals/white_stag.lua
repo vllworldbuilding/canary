@@ -1,10 +1,11 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("White Stag")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.name = "Deer"
+monster.description = "a white stag"
+monster.experience = 10
 monster.outfit = {
-	lookType = 122,
+	lookType = 400,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,7 +14,9 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.events = {}
+
+monster.raceId = 720
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
@@ -22,16 +25,16 @@ monster.Bestiary = {
 	SecondUnlock = 100,
 	CharmsPoints = 5,
 	Stars = 1,
-	Occurrence = 0,
+	Occurrence = 2,
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 390
+monster.maxHealth = 390
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 12527
+monster.speed = 208
+monster.manaCost = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -43,10 +46,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = false,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -54,12 +57,13 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 390,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	isPreyExclusive = true,
 }
 
 monster.light = {
@@ -70,22 +74,24 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
+	{ text = "*bell*", yell = false },
+	{ text = "ROOOAAARR!!", yell = true },
+	{ text = "*sniff*", yell = false },
+	{ text = "*wheeze*", yell = false },
 }
 
 monster.loot = {}
 
-monster.attacks = {}
-
 monster.defenses = {
 	defense = 5,
-	armor = 5,
+	armor = 2,
+	mitigation = 0.56,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

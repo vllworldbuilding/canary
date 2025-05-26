@@ -1,8 +1,9 @@
-local mType = Game.createMonsterType("Cave Rat")
+local mType = Game.createMonsterType("Brown Rat")
 local monster = {}
 
-monster.description = "a cave rat"
-monster.experience = 10
+monster.name = "Rat"
+monster.description = "a brown rat"
+monster.experience = 3
 monster.outfit = {
 	lookType = 56,
 	lookHead = 0,
@@ -23,21 +24,19 @@ monster.Bestiary = {
 	CharmsPoints = 5,
 	Stars = 1,
 	Occurrence = 0,
-	Locations = "Almost everywhere in tibia, they seem to have a nest-like place in Greenshore, \z
-		a semi-large spawn at the entrance to the Port Hope troll cave and in cave near Ankrahmun ship. \z
-		Also appears in Rat Plague in Thais and Rat Plague in Rookgaard.",
+	Locations = "",
 }
 
-monster.health = 30
-monster.maxHealth = 30
+monster.health = 18
+monster.maxHealth = 18
 monster.race = "blood"
-monster.corpse = 5964
-monster.speed = 75
+monster.corpse = 4255
+monster.speed = 500
 monster.manaCost = 250
 
 monster.changeTarget = {
 	interval = 4000,
-	chance = 0,
+	chance = 60,
 }
 
 monster.strategiesTarget = {
@@ -56,7 +55,7 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 3,
+	runHealth = 23,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -72,16 +71,11 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Meeeeep!", yell = false },
 	{ text = "Meep!", yell = false },
+	{ text = "Meeeeep!", yell = false },
 }
 
-monster.loot = {
-	{ id = 3031, chance = 85000, maxCount = 2 }, -- gold coin
-	{ id = 3598, chance = 750 }, -- cookie
-	{ id = 3607, chance = 30000 }, -- cheese
-	{ id = 3492, chance = 9700, maxCount = 2 }, -- worm
-}
+monster.loot = {}
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
@@ -89,7 +83,8 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 5,
-	armor = 5,
+	armor = 1,
+	mitigation = 0.10,
 }
 
 monster.elements = {

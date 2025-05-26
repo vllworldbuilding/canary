@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Badger")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.description = "a badger"
+monster.experience = 2
 monster.outfit = {
-	lookType = 122,
+	lookType = 105,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,7 +13,7 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.raceId = 105
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
@@ -26,12 +26,12 @@ monster.Bestiary = {
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 46
+monster.maxHealth = 46
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 4224
+monster.speed = 140
+monster.manaCost = 200
 
 monster.changeTarget = {
 	interval = 4000,
@@ -45,16 +45,16 @@ monster.strategiesTarget = {
 monster.flags = {
 	summonable = true,
 	attackable = true,
-	hostile = false,
+	hostile = true,
 	convinceable = true,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 30,
+	runHealth = 14,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,22 +70,24 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
 }
 
 monster.loot = {}
 
-monster.attacks = {}
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -12 },
+}
 
 monster.defenses = {
 	defense = 5,
-	armor = 5,
+	armor = 1,
+	mitigation = 0.07,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

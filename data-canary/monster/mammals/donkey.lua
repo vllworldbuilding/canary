@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Donkey")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 5
+monster.description = "a donkey"
+monster.experience = 0
 monster.outfit = {
-	lookType = 122,
+	lookType = 387,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,7 +13,7 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.raceId = 2591
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
@@ -22,20 +22,20 @@ monster.Bestiary = {
 	SecondUnlock = 100,
 	CharmsPoints = 5,
 	Stars = 1,
-	Occurrence = 0,
+	Occurrence = 1,
 	Locations = "",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 45
+monster.maxHealth = 45
 monster.race = "blood"
-monster.corpse = 4363
-monster.speed = 200
-monster.manaCost = 250
+monster.corpse = 12521
+monster.speed = 75
+monster.manaCost = 0
 
 monster.changeTarget = {
-	interval = 4000,
-	chance = 0,
+	interval = 2000,
+	chance = 20,
 }
 
 monster.strategiesTarget = {
@@ -43,18 +43,18 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = false,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
-	targetDistance = 1,
-	runHealth = 30,
+	targetDistance = 4,
+	runHealth = 25,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,22 +70,24 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap!Flap!", yell = false },
+	{ text = "Grunt!", yell = false },
 }
 
 monster.loot = {}
 
-monster.attacks = {}
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -5 },
+}
 
 monster.defenses = {
-	defense = 5,
-	armor = 5,
+	defense = 2,
+	armor = 2,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
