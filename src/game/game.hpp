@@ -850,7 +850,7 @@ private:
 
 	ModalWindow offlineTrainingWindow { std::numeric_limits<uint32_t>::max(), "Choose a Skill", "Please choose a skill:" };
 
-	static constexpr int32_t DAY_LENGTH_SECONDS = 3600;
+	static constexpr int32_t DAY_LENGTH_SECONDS = 14400;
 	static constexpr int32_t LIGHT_DAY_LENGTH = 1440;
 	static constexpr int32_t LIGHT_LEVEL_DAY = 250;
 	static constexpr int32_t LIGHT_LEVEL_NIGHT = 40;
