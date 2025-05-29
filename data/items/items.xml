@@ -23,8 +23,11 @@
     <item id="19" name="candy fluid"/>
     <item id="20" name="chocolate"/>
 	<item id="21" name="fresh water"/>
-
-    <!-- 13.40 last fluid is 20, 21+ is a loop from 0 to 20 over and over again -->
+	<item id="22" name="white wine"/>
+	<item id="23" name="silver fluid"/>
+	<item id="24" name="rose wine"/>
+	<item id="25" name="dark blood"/>		
+<!-- 13.40 last fluid is 20, 21+ is a loop from 0 to 20 over and over again -->
 
 	<item id="100" name="void"/>
 	<item id="101" name="earth"/>

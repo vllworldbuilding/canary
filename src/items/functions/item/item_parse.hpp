@@ -230,6 +230,10 @@ const phmap::flat_hash_map<std::string, Fluids_t> FluidTypesMap = {
 	{ "candyfluid", FLUID_CANDY },
 	{ "chocolate", FLUID_CHOCOLATE },
 	{ "freshwater", FLUID_FRESHWATER },
+	{ "whitewine", FLUID_WHITEWINE },
+	{ "silverfluid", FLUID_SILVER },
+	{ "rosewine", FLUID_ROSEWINE },
+	{ "darkblood", FLUID_DARKBLOOD },		
 };
 
 const phmap::flat_hash_map<std::string, WeaponType_t> WeaponTypesMap = {

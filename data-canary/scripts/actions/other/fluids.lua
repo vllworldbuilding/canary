@@ -31,6 +31,10 @@ local fluidMessage = {
 	[19] = "Mmmh.", -- candy fluid
 	[20] = "Mmmh.", -- chocolate
 	[21] = "Gulp.", -- fresh water
+	[22] = "Aah...", -- white wine
+	[23] = "Urgh!", -- silver fluid
+	[24] = "Aah...", -- rose wine
+	[24] = "Urgh!", -- dark blood	
 }
 
 local fluid = Action()
