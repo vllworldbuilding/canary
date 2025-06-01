@@ -4,7 +4,38 @@ end
 
 local playerLoginGlobal = CreatureEvent("PlayerLoginGlobal")
 
-function playerLoginGlobal.onLogin(player)
+function playerLoginGlobal.onLogin(player)  
+    -- Verificação de Premium Towns (adaptado do Global)  
+    local defaultTown = "Rivenpass" -- sua town padrão  
+    local freeTowns = { "Rivenpass" } -- suas towns gratuitas  
+      
+    if not player:isPremium() and not table.contains(freeTowns, player:getTown():getName()) then  
+        local town = player:getTown()  
+        local sex = player:getSex()  
+        local home = getHouseByPlayerGUID(getPlayerGUID(player))  
+          
+        -- Teleportar para town padrão  
+        town = table.contains(freeTowns, town:getName()) and town or Town(defaultTown)  
+        if town then  
+            player:teleportTo(town:getTemplePosition())  
+            player:setTown(town)  
+            player:sendTextMessage(MESSAGE_FAILURE, "Your premium time has expired!")  
+              
+            -- Mudança de Outfit (do Global)  
+            if sex == 1 then  
+                player:setOutfit({ lookType = 128, lookHead = 114, lookBody = 120, lookLegs = 132, lookFeet = 115, lookAddons = 0 })  
+            elseif sex == 0 then  
+                player:setOutfit({ lookType = 136, lookHead = 114, lookBody = 120, lookLegs = 132, lookFeet = 115, lookAddons = 0 })  
+            end  
+              
+            -- Remoção de Houses (do Global)  
+            if home and not player:isPremium() then  
+                setHouseOwner(home, 0)  
+                player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "You have lost your house because you are no longer a premium account.")  
+                player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "Your items from the house have been sent to your inbox.")  
+            end  
+        end  
+    end  
 	-- Welcome
 	local loginStr
 	if player:getLastLoginSaved() == 0 then
