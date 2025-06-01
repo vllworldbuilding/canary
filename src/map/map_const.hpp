@@ -14,8 +14,8 @@ static constexpr int32_t MAP_MAX_CLIENT_VIEW_PORT_Y = 9;
 static constexpr int32_t MAP_MAX_VIEW_PORT_X = MAP_MAX_CLIENT_VIEW_PORT_X + 3; // min value: maxClientViewportX + 1
 static constexpr int32_t MAP_MAX_VIEW_PORT_Y = MAP_MAX_CLIENT_VIEW_PORT_Y + 5; // min value: maxClientViewportY + 1
 
-static constexpr int8_t MAP_MAX_LAYERS = 16;
-static constexpr int8_t MAP_INIT_SURFACE_LAYER = 7; // (MAP_MAX_LAYERS / 2) -1
+static constexpr int8_t MAP_MAX_LAYERS = 64;
+static constexpr int8_t MAP_INIT_SURFACE_LAYER = 31; // (MAP_MAX_LAYERS / 2) -1
 static constexpr int8_t MAP_LAYER_VIEW_LIMIT = 2;
 
 // SECTOR_SIZE must be power of 2 value
