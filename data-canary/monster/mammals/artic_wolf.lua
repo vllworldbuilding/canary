@@ -106,9 +106,9 @@ monster.immunities = {
 }
 
 monster.onThink = function(this, target)
-    if this.behaviorType and monsterBehaviorLib[this.behaviorType] then
-        monsterBehaviorLib[this.behaviorType](this, target)
-    end
+	if this.behaviorType and monsterBehaviorLib[this.behaviorType] then
+		monsterBehaviorLib[this.behaviorType](this, target)
+	end
 end
 
 mType:register(monster)

@@ -39,7 +39,7 @@ monster.changeTarget = {
 	chance = 20, -- don't know
 }
 
-monster.strategiesTarget = { 
+monster.strategiesTarget = {
 	nearest = 100, -- don't know
 }
 
@@ -80,7 +80,7 @@ monster.loot = { -- don't know
 	{ id = 32010, chance = 0000, maxCount = 2 }, -- meat hammer
 	{ id = 32011, chance = 0000, maxCount = 165 }, -- milk churn
 	{ id = 32012, chance = 0000, maxCount = 2 }, -- cow bell
-} 
+}
 
 monster.attacks = { -- don't know
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -85 },
