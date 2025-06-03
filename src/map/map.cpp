@@ -455,7 +455,7 @@ bool Map::canThrowObjectTo(const Position &fromPos, const Position &toPos, const
 	// z checks
 	// underground 8->15
 	// ground level and above 7->0
-	if ((fromPos.z >= 8 && toPos.z <= MAP_INIT_SURFACE_LAYER) || (toPos.z >= MAP_INIT_SURFACE_LAYER + 1 && fromPos.z <= MAP_INIT_SURFACE_LAYER)) {
+	if ((fromPos.z >= 32 && toPos.z <= MAP_INIT_SURFACE_LAYER) || (toPos.z >= MAP_INIT_SURFACE_LAYER + 1 && fromPos.z <= MAP_INIT_SURFACE_LAYER)) {
 		return false;
 	}
 
