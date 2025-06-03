@@ -26,7 +26,10 @@
 	<item id="22" name="white wine"/>
 	<item id="23" name="silver fluid"/>
 	<item id="24" name="rose wine"/>
-	<item id="25" name="dark blood"/>		
+	<item id="25" name="dark blood"/>
+	<item id="26" name="berry juice"/>
+	<item id="27" name="chocolate milk"/>
+	<item id="28" name="orange juice"/>		
 <!-- 13.40 last fluid is 20, 21+ is a loop from 0 to 20 over and over again -->
 
 	<item id="100" name="void"/>

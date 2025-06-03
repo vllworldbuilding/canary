@@ -385,7 +385,10 @@ enum Fluids_t : uint8_t {
 	FLUID_WHITEWINE = 22, /* Light Yellow */
 	FLUID_SILVER = 23, /* Grey */
 	FLUID_ROSEWINE = 24, /* Light Red */
-	FLUID_DARKBLOOD = 24, /* Dark Red */			
+	FLUID_DARKBLOOD = 25, /* Dark Red */
+	FLUID_BERRYJUICE = 26, /* Dark Red */
+	FLUID_CHOCOLATEMILK = 27, /* Brown */
+	FLUID_ORANGEJUICE = 28, /* Orange */
 	// 13.40 last fluid is 20, 21+ is a loop from 0 to 20 over and over again
 };
 
