@@ -3346,6 +3346,22 @@ ObjectCategory_t Game::getObjectCategory(const ItemType &it) {
 			category = OBJECTCATEGORY_BOOTS;
 		} else if ((it.slotPosition & SLOTP_RING) != 0) {
 			category = OBJECTCATEGORY_RINGS;
+		} else if ((it.slotPosition & SLOTP_GAUNTLETS) != 0) {
+			category = OBJECTCATEGORY_GAUNTLETS;
+		} else if ((it.slotPosition & SLOTP_CROWN) != 0) {
+			category = OBJECTCATEGORY_CROWN;
+		} else if ((it.slotPosition & SLOTP_MANTLE) != 0) {
+			category = OBJECTCATEGORY_MANTLE;
+		} else if ((it.slotPosition & SLOTP_COWL) != 0) {
+			category = OBJECTCATEGORY_COWL;
+		} else if ((it.slotPosition & SLOTP_BELT) != 0) {
+			category = OBJECTCATEGORY_BELT;
+		} else if ((it.slotPosition & SLOTP_EARRINGS) != 0) {
+			category = OBJECTCATEGORY_EARRINGS;
+		} else if ((it.slotPosition & SLOTP_ARMRING) != 0) {
+			category = OBJECTCATEGORY_ARMRING;
+		} else if ((it.slotPosition & SLOTP_FIBULA) != 0) {
+			category = OBJECTCATEGORY_FIBULA;																								
 		}
 	} else if (it.type == ITEM_TYPE_RUNE) {
 		category = OBJECTCATEGORY_RUNES;
@@ -3422,6 +3438,22 @@ Slots_t getSlotType(const ItemType &it) {
 			slot = CONST_SLOT_RING;
 		} else if (slotPosition & SLOTP_AMMO) {
 			slot = CONST_SLOT_AMMO;
+		} else if (slotPosition & SLOTP_GAUNTLETS) {
+			slot = CONST_SLOT_GAUNTLETS;
+		} else if (slotPosition & SLOTP_CROWN) {
+			slot = CONST_SLOT_CROWN;
+		} else if (slotPosition & SLOTP_MANTLE) {
+			slot = CONST_SLOT_MANTLE;
+		} else if (slotPosition & SLOTP_COWL) {
+			slot = CONST_SLOT_COWL;
+		} else if (slotPosition & SLOTP_BELT) {
+			slot = CONST_SLOT_BELT;
+		} else if (slotPosition & SLOTP_EARRINGS) {
+			slot = CONST_SLOT_EARRINGS;
+		} else if (slotPosition & SLOTP_ARMRING) {
+			slot = CONST_SLOT_ARMRING;
+		} else if (slotPosition & SLOTP_FIBULA) {
+			slot = CONST_SLOT_FIBULA;																								
 		} else if (slotPosition & SLOTP_TWO_HAND || slotPosition & SLOTP_LEFT) {
 			slot = CONST_SLOT_LEFT;
 		}

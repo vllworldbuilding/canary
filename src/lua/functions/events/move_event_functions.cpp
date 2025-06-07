@@ -146,6 +146,22 @@ int MoveEventFunctions::luaMoveEventSlot(lua_State* L) {
 			moveevent->setSlot(SLOTP_RING);
 		} else if (slotName == "ammo") {
 			moveevent->setSlot(SLOTP_AMMO);
+		} else if (slotName == "gauntlets") {
+			moveevent->setSlot(SLOTP_GAUNTLETS);
+		} else if (slotName == "crown") {
+			moveevent->setSlot(SLOTP_CROWN);
+		} else if (slotName == "mantle") {
+			moveevent->setSlot(SLOTP_MANTLE);
+		} else if (slotName == "cowl") {
+			moveevent->setSlot(SLOTP_COWL);
+		} else if (slotName == "belt") {
+			moveevent->setSlot(SLOTP_BELT);
+		} else if (slotName == "earrings") {
+			moveevent->setSlot(SLOTP_EARRINGS);
+		} else if (slotName == "armring") {
+			moveevent->setSlot(SLOTP_ARMRING);
+		} else if (slotName == "fibula") {
+			moveevent->setSlot(SLOTP_FIBULA);																								
 		} else {
 			g_logger().warn("[MoveEventFunctions::luaMoveEventSlot] - "
 			                "Unknown slot type: {}",

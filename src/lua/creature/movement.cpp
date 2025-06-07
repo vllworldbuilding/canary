@@ -191,6 +191,30 @@ std::shared_ptr<MoveEvent> MoveEvents::getEvent(const std::shared_ptr<Item> &ite
 		case CONST_SLOT_RING:
 			slotp = SLOTP_RING;
 			break;
+		case CONST_SLOT_GAUNTLETS:
+			slotp = SLOTP_GAUNTLETS;
+			break;
+		case CONST_SLOT_CROWN:
+			slotp = SLOTP_CROWN;
+			break;	
+		case CONST_SLOT_MANTLE:
+			slotp = SLOTP_MANTLE;
+			break;	
+		case CONST_SLOT_COWL:
+			slotp = SLOTP_COWL;
+			break;	
+		case CONST_SLOT_BELT:
+			slotp = SLOTP_BELT;
+			break;	
+		case CONST_SLOT_EARRINGS:
+			slotp = SLOTP_EARRINGS;
+			break;	
+		case CONST_SLOT_ARMRING:
+			slotp = SLOTP_ARMRING;
+			break;	
+		case CONST_SLOT_FIBULA:
+			slotp = SLOTP_FIBULA;
+			break;																									
 		default:
 			slotp = 0;
 			break;

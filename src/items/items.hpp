@@ -206,6 +206,30 @@ public:
 	bool isBoots() const {
 		return slotPosition & SLOTP_FEET;
 	}
+	bool isGauntlets() const {
+		return slotPosition & SLOTP_GAUNTLETS;
+	}
+	bool isCrown() const {
+		return slotPosition & SLOTP_CROWN;
+	}
+	bool isMantle() const {
+		return slotPosition & SLOTP_MANTLE;
+	}
+	bool isCowl() const {
+		return slotPosition & SLOTP_COWL;
+	}
+	bool isBelt() const {
+		return slotPosition & SLOTP_BELT;
+	}
+	bool isEarrings() const {
+		return slotPosition & SLOTP_EARRINGS;
+	}
+	bool isArmring() const {
+		return slotPosition & SLOTP_ARMRING;
+	}
+	bool isFibula() const {
+		return slotPosition & SLOTP_FIBULA;
+	}							
 	bool isRanged() const {
 		return weaponType == WEAPON_DISTANCE && weaponType != WEAPON_NONE;
 	}

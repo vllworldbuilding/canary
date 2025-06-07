@@ -301,6 +301,22 @@ void ItemParse::parseSlotType(const std::string &stringValue, pugi::xml_attribut
 			itemType.slotPosition |= SLOTP_RING;
 		} else if (subStringValue == "ammo") {
 			itemType.slotPosition |= SLOTP_AMMO;
+		} else if (subStringValue == "gauntlets") {
+			itemType.slotPosition |= SLOTP_GAUNTLETS;
+		} else if (subStringValue == "crown") {
+			itemType.slotPosition |= SLOTP_CROWN;	
+		} else if (subStringValue == "mantle") {
+			itemType.slotPosition |= SLOTP_MANTLE;	
+		} else if (subStringValue == "cowl") {
+			itemType.slotPosition |= SLOTP_COWL;	
+		} else if (subStringValue == "belt") {
+			itemType.slotPosition |= SLOTP_BELT;	
+		} else if (subStringValue == "earrings") {
+			itemType.slotPosition |= SLOTP_EARRINGS;	
+		} else if (subStringValue == "armring") {
+			itemType.slotPosition |= SLOTP_ARMRING;	
+		} else if (subStringValue == "fibula") {
+			itemType.slotPosition |= SLOTP_FIBULA;																									
 		} else if (subStringValue == "hand") {
 			itemType.slotPosition |= SLOTP_HAND;
 		} else {
@@ -1075,6 +1091,22 @@ void ItemParse::createAndRegisterScript(ItemType &itemType, pugi::xml_node attri
 					moveevent->setSlot(SLOTP_RING);
 				} else if (slotName == "ammo") {
 					moveevent->setSlot(SLOTP_AMMO);
+				} else if (slotName == "gauntlets") {
+					moveevent->setSlot(SLOTP_GAUNTLETS);
+				} else if (slotName == "crown") {
+					moveevent->setSlot(SLOTP_CROWN);
+				} else if (slotName == "mantle") {
+					moveevent->setSlot(SLOTP_MANTLE);
+				} else if (slotName == "cowl") {
+					moveevent->setSlot(SLOTP_COWL);
+				} else if (slotName == "belt") {
+					moveevent->setSlot(SLOTP_BELT);
+				} else if (slotName == "earrings") {
+					moveevent->setSlot(SLOTP_EARRINGS);
+				} else if (slotName == "armring") {
+					moveevent->setSlot(SLOTP_ARMRING);
+				} else if (slotName == "fibula") {
+					moveevent->setSlot(SLOTP_FIBULA);																																								
 				} else if (slotName == "two-handed") {
 					moveevent->setSlot(SLOTP_TWO_HAND);
 				} else {

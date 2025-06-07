@@ -533,7 +533,7 @@ uint16_t Player::attackRawTotal(uint16_t flatBonus, uint16_t equipment, uint16_t
 int32_t Player::getArmor() const {
 	int32_t armor = 0;
 
-	static constexpr Slots_t armorSlots[] = { CONST_SLOT_HEAD, CONST_SLOT_NECKLACE, CONST_SLOT_ARMOR, CONST_SLOT_LEGS, CONST_SLOT_FEET, CONST_SLOT_RING, CONST_SLOT_AMMO };
+	static constexpr Slots_t armorSlots[] = { CONST_SLOT_HEAD, CONST_SLOT_NECKLACE, CONST_SLOT_ARMOR, CONST_SLOT_LEGS, CONST_SLOT_FEET, CONST_SLOT_RING, CONST_SLOT_AMMO, CONST_SLOT_GAUNTLETS, CONST_SLOT_CROWN, CONST_SLOT_MANTLE, CONST_SLOT_COWL, CONST_SLOT_BELT, CONST_SLOT_EARRINGS, CONST_SLOT_ARMRING, CONST_SLOT_FIBULA };
 	for (const Slots_t &slot : armorSlots) {
 		const auto &inventoryItem = inventory[slot];
 		if (inventoryItem) {
@@ -4231,7 +4231,7 @@ ReturnValue Player::queryAdd(int32_t index, const std::shared_ptr<Thing> &thing,
 	if (allowPutItemsOnAmmoSlot && index == CONST_SLOT_AMMO) {
 		ret = RETURNVALUE_NOERROR;
 	} else {
-		if ((slotPosition & SLOTP_HEAD) || (slotPosition & SLOTP_NECKLACE) || (slotPosition & SLOTP_BACKPACK) || (slotPosition & SLOTP_ARMOR) || (slotPosition & SLOTP_LEGS) || (slotPosition & SLOTP_FEET) || (slotPosition & SLOTP_RING)) {
+		if ((slotPosition & SLOTP_HEAD) || (slotPosition & SLOTP_NECKLACE) || (slotPosition & SLOTP_BACKPACK) || (slotPosition & SLOTP_ARMOR) || (slotPosition & SLOTP_LEGS) || (slotPosition & SLOTP_FEET) || (slotPosition & SLOTP_RING) || (slotPosition & SLOTP_GAUNTLETS) || (slotPosition & SLOTP_CROWN) || (slotPosition & SLOTP_MANTLE) || (slotPosition & SLOTP_COWL) || (slotPosition & SLOTP_BELT) || (slotPosition & SLOTP_EARRINGS) || (slotPosition & SLOTP_ARMRING) || (slotPosition & SLOTP_FIBULA)) {
 			ret = RETURNVALUE_CANNOTBEDRESSED;
 		} else if (slotPosition & SLOTP_TWO_HAND) {
 			ret = RETURNVALUE_PUTTHISOBJECTINBOTHHANDS;
@@ -4369,6 +4369,62 @@ ReturnValue Player::queryAdd(int32_t index, const std::shared_ptr<Thing> &thing,
 			}
 			break;
 		}
+
+		case CONST_SLOT_GAUNTLETS: {
+			if (slotPosition & SLOTP_GAUNTLETS) {
+				ret = RETURNVALUE_NOERROR;
+			}
+			break;
+		}		
+
+		case CONST_SLOT_CROWN: {
+			if (slotPosition & SLOTP_CROWN) {
+				ret = RETURNVALUE_NOERROR;
+			}
+			break;
+		}		
+
+		case CONST_SLOT_MANTLE: {
+			if (slotPosition & SLOTP_MANTLE) {
+				ret = RETURNVALUE_NOERROR;
+			}
+			break;
+		}		
+
+		case CONST_SLOT_COWL: {
+			if (slotPosition & SLOTP_COWL) {
+				ret = RETURNVALUE_NOERROR;
+			}
+			break;
+		}		
+
+		case CONST_SLOT_BELT: {
+			if (slotPosition & SLOTP_BELT) {
+				ret = RETURNVALUE_NOERROR;
+			}
+			break;
+		}		
+
+		case CONST_SLOT_EARRINGS: {
+			if (slotPosition & SLOTP_EARRINGS) {
+				ret = RETURNVALUE_NOERROR;
+			}
+			break;
+		}		
+
+		case CONST_SLOT_ARMRING: {
+			if (slotPosition & SLOTP_ARMRING) {
+				ret = RETURNVALUE_NOERROR;
+			}
+			break;
+		}		
+
+		case CONST_SLOT_FIBULA: {
+			if (slotPosition & SLOTP_FIBULA) {
+				ret = RETURNVALUE_NOERROR;
+			}
+			break;
+		}		
 
 		case CONST_SLOT_RING: {
 			if (slotPosition & SLOTP_RING) {
@@ -4527,7 +4583,7 @@ std::shared_ptr<Cylinder> Player::queryDestination(int32_t &index, const std::sh
 
 		std::vector<std::shared_ptr<Container>> containers;
 
-		for (uint32_t slotIndex = CONST_SLOT_FIRST; slotIndex <= CONST_SLOT_AMMO; ++slotIndex) {
+		for (uint32_t slotIndex = CONST_SLOT_FIRST; slotIndex <= CONST_SLOT_FIBULA; ++slotIndex) {
 			std::shared_ptr<Item> inventoryItem = inventory[slotIndex];
 			if (inventoryItem) {
 				if (inventoryItem == tradeItem) {
@@ -5498,6 +5554,14 @@ std::vector<std::shared_ptr<Item>> Player::getEquippedItems() const {
 		CONST_SLOT_LEGS,
 		CONST_SLOT_FEET,
 		CONST_SLOT_RING,
+		CONST_SLOT_GAUNTLETS,
+		CONST_SLOT_CROWN,
+		CONST_SLOT_MANTLE,
+		CONST_SLOT_COWL,
+		CONST_SLOT_BELT,
+		CONST_SLOT_EARRINGS,
+		CONST_SLOT_ARMRING,
+		CONST_SLOT_FIBULA,		
 	};
 
 	std::vector<std::shared_ptr<Item>> valid_items;
@@ -8685,7 +8749,7 @@ std::vector<std::shared_ptr<Container>> Player::getAllContainers(bool onlyFromMa
 	}
 
 	// Gather all containers from player inventory
-	for (uint32_t slot = CONST_SLOT_FIRST; slot <= CONST_SLOT_AMMO; ++slot) {
+	for (uint32_t slot = CONST_SLOT_FIRST; slot <= CONST_SLOT_FIBULA; ++slot) {
 		// Skip slots check if onlyFromMainBackpack is true
 		if (onlyFromMainBackpack) {
 			break;

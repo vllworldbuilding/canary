@@ -1698,6 +1698,22 @@ Item::getDescriptions(const ItemType &it, const std::shared_ptr<Item> &item /*= 
 			descriptions.emplace_back("Body Position", "weapon hand");
 		} else if (it.slotPosition & SLOTP_RIGHT) {
 			descriptions.emplace_back("Body Position", "shield hand");
+		} else if (it.slotPosition & SLOTP_GAUNTLETS) {
+			descriptions.emplace_back("Body Position", "gauntlets");
+		} else if (it.slotPosition & SLOTP_CROWN) {
+			descriptions.emplace_back("Body Position", "crown");
+		} else if (it.slotPosition & SLOTP_MANTLE) {
+			descriptions.emplace_back("Body Position", "mantle");
+		} else if (it.slotPosition & SLOTP_COWL) {
+			descriptions.emplace_back("Body Position", "cowl");
+		} else if (it.slotPosition & SLOTP_BELT) {
+			descriptions.emplace_back("Body Position", "belt");
+		} else if (it.slotPosition & SLOTP_EARRINGS) {
+			descriptions.emplace_back("Body Position", "earrings");
+		} else if (it.slotPosition & SLOTP_ARMRING) {
+			descriptions.emplace_back("Body Position", "armring");
+		} else if (it.slotPosition & SLOTP_FIBULA) {
+			descriptions.emplace_back("Body Position", "fibula");																								
 		}
 
 		if (it.upgradeClassification > 0) {
@@ -2039,6 +2055,22 @@ Item::getDescriptions(const ItemType &it, const std::shared_ptr<Item> &item /*= 
 			descriptions.emplace_back("Body Position", "finger");
 		} else if (it.slotPosition & SLOTP_AMMO) {
 			descriptions.emplace_back("Body Position", "extra slot");
+		} else if (it.slotPosition & SLOTP_GAUNTLETS) {
+			descriptions.emplace_back("Body Position", "gauntlets");
+		} else if (it.slotPosition & SLOTP_CROWN) {
+			descriptions.emplace_back("Body Position", "crown");
+		} else if (it.slotPosition & SLOTP_MANTLE) {
+			descriptions.emplace_back("Body Position", "mantle");
+		} else if (it.slotPosition & SLOTP_COWL) {
+			descriptions.emplace_back("Body Position", "cowl");
+		} else if (it.slotPosition & SLOTP_BELT) {
+			descriptions.emplace_back("Body Position", "belt");
+		} else if (it.slotPosition & SLOTP_EARRINGS) {
+			descriptions.emplace_back("Body Position", "earrings");
+		} else if (it.slotPosition & SLOTP_ARMRING) {
+			descriptions.emplace_back("Body Position", "armring");
+		} else if (it.slotPosition & SLOTP_FIBULA) {
+			descriptions.emplace_back("Body Position", "fibula");																								
 		} else if (it.slotPosition & SLOTP_TWO_HAND) {
 			descriptions.emplace_back("Body Position", "both hands");
 		} else if ((it.slotPosition & SLOTP_LEFT) && it.weaponType != WEAPON_SHIELD) {

@@ -1774,6 +1774,22 @@ std::string getObjectCategoryName(ObjectCategory_t category) {
 			return "Copper";
 		case OBJECTCATEGORY_QUIVERS:
 			return "Quiver";
+		case OBJECTCATEGORY_GAUNTLETS:
+			return "Gauntlets";
+		case OBJECTCATEGORY_CROWN:
+			return "Crown";	
+		case OBJECTCATEGORY_MANTLE:
+			return "Mantle";	
+		case OBJECTCATEGORY_COWL:
+			return "Cowl";	
+		case OBJECTCATEGORY_BELT:
+			return "Belt";	
+		case OBJECTCATEGORY_EARRINGS:
+			return "Earrings";	
+		case OBJECTCATEGORY_ARMRING:
+			return "Armring";	
+		case OBJECTCATEGORY_FIBULA:
+			return "Fibula";																								
 		case OBJECTCATEGORY_DEFAULT:
 			return "Unassigned Loot";
 		default:
@@ -1810,6 +1826,14 @@ bool isValidObjectCategory(ObjectCategory_t category) {
 		OBJECTCATEGORY_CREATUREPRODUCTS,
 		OBJECTCATEGORY_QUIVERS,
 		OBJECTCATEGORY_COPPER,
+		OBJECTCATEGORY_GAUNTLETS,
+		OBJECTCATEGORY_CROWN,
+		OBJECTCATEGORY_MANTLE,
+		OBJECTCATEGORY_COWL,
+		OBJECTCATEGORY_BELT,
+		OBJECTCATEGORY_EARRINGS,
+		OBJECTCATEGORY_ARMRING,
+		OBJECTCATEGORY_FIBULA,		
 		OBJECTCATEGORY_DEFAULT,
 	};
 	return valid.contains(category);

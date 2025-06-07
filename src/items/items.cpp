@@ -58,6 +58,14 @@ LootTypeNames lootTypeNames = {
 	{ "creatureproduct", ITEM_TYPE_CREATUREPRODUCT },
 	{ "retrieve", ITEM_TYPE_RETRIEVE },
 	{ "copper", ITEM_TYPE_COPPER },
+	{ "gauntlets", ITEM_TYPE_GAUNTLETS },
+	{ "crown", ITEM_TYPE_CROWN },
+	{ "mantle", ITEM_TYPE_MANTLE },
+	{ "cowl", ITEM_TYPE_COWL },
+	{ "belt", ITEM_TYPE_BELT },
+	{ "earrings", ITEM_TYPE_EARRINGS },
+	{ "armring", ITEM_TYPE_ARMRING },
+	{ "fibula", ITEM_TYPE_FIBULA },
 	{ "unassigned", ITEM_TYPE_UNASSIGNED },
 };
 
@@ -296,7 +304,7 @@ bool Items::loadFromXml() {
 void Items::buildInventoryList() {
 	inventory.reserve(items.size());
 	for (const auto &type : items) {
-		if (type.weaponType != WEAPON_NONE || type.ammoType != AMMO_NONE || type.attack != 0 || type.defense != 0 || type.extraDefense != 0 || type.armor != 0 || type.slotPosition & SLOTP_NECKLACE || type.slotPosition & SLOTP_RING || type.slotPosition & SLOTP_AMMO || type.slotPosition & SLOTP_FEET || type.slotPosition & SLOTP_HEAD || type.slotPosition & SLOTP_ARMOR || type.slotPosition & SLOTP_LEGS) {
+		if (type.weaponType != WEAPON_NONE || type.ammoType != AMMO_NONE || type.attack != 0 || type.defense != 0 || type.extraDefense != 0 || type.armor != 0 || type.slotPosition & SLOTP_NECKLACE || type.slotPosition & SLOTP_RING || type.slotPosition & SLOTP_AMMO || type.slotPosition & SLOTP_FEET || type.slotPosition & SLOTP_HEAD || type.slotPosition & SLOTP_ARMOR || type.slotPosition & SLOTP_LEGS || type.slotPosition & SLOTP_GAUNTLETS || type.slotPosition & SLOTP_CROWN || type.slotPosition & SLOTP_MANTLE || type.slotPosition & SLOTP_COWL || type.slotPosition & SLOTP_BELT || type.slotPosition & SLOTP_EARRINGS || type.slotPosition & SLOTP_ARMRING || type.slotPosition & SLOTP_FIBULA) {
 			inventory.push_back(type.id);
 		}
 	}
