@@ -1,0 +1,32 @@
+name: Monitorar Execuções de Workflows
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # A cada 30 minutos
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Buscar execuções recentes
+        run: |
+          repo="opentibiabr/canary"
+          webhook="https://discord.com/api/webhooks/1412480769791754372/QqleOqD8511VXGEkHbbgYLkUHPBfmDXSIxohTx_3sgahtxfIzbBwU40EJtrWr2oR3jVi"
+
+          workflows=$(curl -s "https://api.github.com/repos/$repo/actions/runs?per_page=5")
+
+          mensagem="📊 **Últimas execuções de workflows em $repo**\n"
+
+          echo "$workflows" | jq -c '.workflow_runs[]' | while read -r wf; do
+            nome=$(echo "$wf" | jq -r '.name')
+            status=$(echo "$wf" | jq -r '.status')
+            conclusao=$(echo "$wf" | jq -r '.conclusion')
+            url=$(echo "$wf" | jq -r '.html_url')
+            mensagem+="🔧 [$nome]($url) — Status: *$status*, Resultado: *$conclusao*\n"
+          done
+
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d "{\"content\": \"$mensagem\"}" \
+               "$webhook"
